@@ -1,0 +1,1325 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore the World with Mahek</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f9f9;
+            color: #222;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 6%;
+
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #5eead4;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 92vh;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(0, 0, 0, 0.60),
+    
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 68px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: white;
+            font-size: 48px;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #f1f1f1;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+
+            background: #159895;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 30px;
+
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #0f7774;
+            transform: translateY(-3px);
+        }
+
+        /* Floating circles */
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            animation: floatCircle 8s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 180px;
+            height: 180px;
+            top: 15%;
+            left: 8%;
+        }
+
+        .circle2 {
+            width: 250px;
+            height: 250px;
+            bottom: -80px;
+            right: 8%;
+            animation-delay: 2s;
+        }
+
+        .circle3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatCircle {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 80px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            color: #123c3a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* ================= COUNTRIES ================= */
+
+        .countries {
+            background: white;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .country-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+
+            transition: 0.4s;
+        }
+
+        .country-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+        }
+
+        .country-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .country-info {
+            padding: 22px;
+        }
+
+        .country-info h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+            color: #123c3a;
+            margin-bottom: 10px;
+        }
+
+        .country-info p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 9px 18px;
+
+            background: #159895;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 20px;
+
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .explore-btn:hover {
+            background: #0d706e;
+        }
+
+        /* ================= DESTINATIONS ================= */
+
+        .destinations {
+            background: #eef7f6;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .destination-card {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .destination-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            padding: 22px;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.8)
+            );
+
+            color: white;
+        }
+
+        .destination-overlay h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+        }
+
+        /* ================= HOTELS ================= */
+
+        .hotels {
+            background: white;
+        }
+
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .hotel-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+            transition: 0.3s;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .hotel-info {
+            padding: 20px;
+        }
+
+        .hotel-info h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            color: #123c3a;
+        }
+
+        .hotel-info p {
+            margin-top: 8px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ================= FOOD ================= */
+
+        .food {
+            background: #eef7f6;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+            transition: 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .food-card div {
+            padding: 18px;
+        }
+
+        .food-card h3 {
+            font-family: "Playfair Display", serif;
+            color: #123c3a;
+        }
+
+        .food-card p {
+            color: #666;
+            font-size: 13px;
+            margin-top: 7px;
+        }
+
+        /* ================= ACTIVITIES ================= */
+
+        .activities {
+            background: white;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .activity-card {
+            padding: 30px 20px;
+            text-align: center;
+
+            background: #f7f9f9;
+
+            border-radius: 16px;
+
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .activity-card:hover {
+            background: #159895;
+            color: white;
+            transform: translateY(-7px);
+        }
+
+        .activity-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .activity-card h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 8px;
+        }
+
+        .activity-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .activity-card:hover p {
+            color: white;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #123c3a;
+            color: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            line-height: 1.9;
+            color: #d9eeee;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #eef7f6;
+        }
+
+        .contact-form {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 500;
+            color: #123c3a;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            font-family: "Poppins", sans-serif;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #159895;
+        }
+
+        .form-group textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+
+            border: none;
+            border-radius: 25px;
+
+            background: #159895;
+            color: white;
+
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #0d706e;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0b2928;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #bcd5d4;
+            font-size: 13px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1000px) {
+            .country-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .destination-grid,
+            .food-grid,
+            .activity-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hotel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero h1 span {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 15px 4%;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .country-grid,
+            .destination-grid,
+            .hotel-grid,
+            .food-grid,
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h1 span {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <div class="logo">Explore the World</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#countries">Countries</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+
+        <div class="hero-content">
+
+            <h1>
+                Explore the World
+                <span>with Mahek</span>
+            </h1>
+
+            <p>
+                Discover beautiful countries, amazing destinations,
+                delicious food, comfortable hotels and unforgettable
+                travel experiences.
+            </p>
+
+            <a href="#countries" class="hero-btn">
+                Start Exploring
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ================= COUNTRIES ================= -->
+
+    <section class="countries" id="countries">
+
+        <div class="section-title">
+            <h2>Explore Countries</h2>
+            <p>Choose a country and discover its beauty</p>
+        </div>
+
+        <div class="country-grid">
+
+            <!-- Turkey -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=85"
+                    alt="Turkey">
+
+                <div class="country-info">
+
+                    <h3>Turkey</h3>
+
+                    <p>
+                        Discover Istanbul, Cappadocia, ancient history,
+                        Turkish food and beautiful landscapes.
+                    </p>
+
+                    <a href="turkey.html" class="explore-btn">
+                        Explore Turkey
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- United Kingdom -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=85"
+                    alt="United Kingdom">
+
+                <div class="country-info">
+
+                    <h3>United Kingdom</h3>
+
+                    <p>
+                        Explore London, historic castles, beautiful
+                        countryside and British culture.
+                    </p>
+
+                    <a href="united-kingdom.html" class="explore-btn">
+                        Explore United Kingdom
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Switzerland -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=900&q=85"
+                    alt="Switzerland">
+
+                <div class="country-info">
+
+                    <h3>Switzerland</h3>
+
+                    <p>
+                        Enjoy the Swiss Alps, peaceful lakes, villages
+                        and unforgettable mountain views.
+                    </p>
+
+                    <a href="switzerland.html" class="explore-btn">
+                        Explore Switzerland
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Italy -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=900&q=85"
+                    alt="Italy">
+
+                <div class="country-info">
+
+                    <h3>Italy</h3>
+
+                    <p>
+                        Visit Rome, Venice, Florence and discover
+                        Italian history, art and food.
+                    </p>
+
+                    <a href="italy.html" class="explore-btn">
+                        Explore Italy
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Japan -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=900&q=85"
+                    alt="Japan">
+
+                <div class="country-info">
+
+                    <h3>Japan</h3>
+
+                    <p>
+                        Experience Tokyo, Kyoto, Mount Fuji, Japanese
+                        culture and traditional cuisine.
+                    </p>
+
+                    <a href="japan.html" class="explore-btn">
+                        Explore Japan
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- France -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85"
+                    alt="France">
+
+                <div class="country-info">
+
+                    <h3>France</h3>
+
+                    <p>
+                        Explore Paris, the Eiffel Tower, French cuisine
+                        and romantic destinations.
+                    </p>
+
+                    <a href="france.html" class="explore-btn">
+                        Explore France
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- South Korea -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1538485399081-7c897c7c7b4a?auto=format&fit=crop&w=900&q=85"
+                    alt="South Korea">
+
+                <div class="country-info">
+
+                    <h3>South Korea</h3>
+
+                    <p>
+                        Discover Seoul, Korean culture, palaces, modern
+                        cities and delicious Korean food.
+                    </p>
+
+                    <a href="south-korea.html" class="explore-btn">
+                        Explore South Korea
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Germany -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=85"
+                    alt="Germany">
+
+                <div class="country-info">
+
+                    <h3>Germany</h3>
+
+                    <p>
+                        Discover Berlin, historic castles, beautiful
+                        cities and German traditions.
+                    </p>
+
+                    <a href="germany.html" class="explore-btn">
+                        Explore Germany
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- United Arab Emirates -->
+
+            <div class="country-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85"
+                    alt="United Arab Emirates">
+
+                <div class="country-info">
+
+                    <h3>United Arab Emirates</h3>
+
+                    <p>
+                        Explore Dubai, Abu Dhabi, luxury attractions,
+                        modern architecture and desert adventures.
+                    </p>
+
+                    <a href="united-arab-emirates.html" class="explore-btn">
+                        Explore United Arab Emirates
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= DESTINATIONS ================= -->
+
+    <section class="destinations" id="destinations">
+
+        <div class="section-title">
+            <h2>Popular Destinations</h2>
+            <p>Beautiful places around the world</p>
+        </div>
+
+        <div class="destination-grid">
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85"
+                    alt="Paris">
+
+                <div class="destination-overlay">
+                    <h3>Paris</h3>
+                    <p>France</p>
+                </div>
+
+            </div>
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=85"
+                    alt="Tokyo">
+
+                <div class="destination-overlay">
+                    <h3>Tokyo</h3>
+                    <p>Japan</p>
+                </div>
+
+            </div>
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=900&q=85"
+                    alt="London">
+
+                <div class="destination-overlay">
+                    <h3>London</h3>
+                    <p>United Kingdom</p>
+                </div>
+
+            </div>
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85"
+                    alt="Dubai">
+
+                <div class="destination-overlay">
+                    <h3>Dubai</h3>
+                    <p>United Arab Emirates</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= HOTELS ================= -->
+
+    <section class="hotels" id="hotels">
+
+        <div class="section-title">
+            <h2>Beautiful Hotels</h2>
+            <p>Comfortable places to stay during your journey</p>
+        </div>
+
+        <div class="hotel-grid">
+
+            <div class="hotel-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=85"
+                    alt="Luxury Hotel">
+
+                <div class="hotel-info">
+
+                    <h3>Luxury Hotels</h3>
+
+                    <p>
+                        Enjoy beautiful rooms, excellent service and
+                        relaxing environments.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="hotel-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=85"
+                    alt="Modern Hotel">
+
+                <div class="hotel-info">
+
+                    <h3>Modern Hotels</h3>
+
+                    <p>
+                        Comfortable and stylish hotels for modern
+                        travelers.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="hotel-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=900&q=85"
+                    alt="Resort">
+
+                <div class="hotel-info">
+
+                    <h3>Resorts</h3>
+
+                    <p>
+                        Relax and enjoy peaceful resorts surrounded by
+                        beautiful scenery.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOD ================= -->
+
+    <section class="food" id="food">
+
+        <div class="section-title">
+            <h2>World Food</h2>
+            <p>Taste delicious dishes from different countries</p>
+        </div>
+
+        <div class="food-grid">
+
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=85"
+                    alt="Italian Pasta">
+
+                <div>
+                    <h3>Italian Pasta</h3>
+                    <p>Traditional Italian pasta with delicious flavors.</p>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=85"
+                    alt="Sushi">
+
+                <div>
+                    <h3>Japanese Sushi</h3>
+                    <p>Fresh and beautifully prepared Japanese sushi.</p>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+                    alt="Turkish Food">
+
+                <div>
+                    <h3>Turkish Cuisine</h3>
+                    <p>Rich and flavorful dishes from Turkey.</p>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=900&q=85"
+                    alt="World Food">
+
+                <div>
+                    <h3>World Cuisine</h3>
+                    <p>Discover different tastes from around the world.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= ACTIVITIES ================= -->
+
+    <section class="activities" id="activities">
+
+        <div class="section-title">
+            <h2>Travel Activities</h2>
+            <p>Make your journey exciting and memorable</p>
+        </div>
+
+        <div class="activity-grid">
+
+            <div class="activity-card" onclick="showActivity('Mountain Hiking')">
+
+                <div class="activity-icon">🏔️</div>
+
+                <h3>Mountain Hiking</h3>
+
+                <p>
+                    Explore beautiful mountains and natural landscapes.
+                </p>
+
+            </div>
+
+            <div class="activity-card" onclick="showActivity('City Tours')">
+
+                <div class="activity-icon">🏙️</div>
+
+                <h3>City Tours</h3>
+
+                <p>
+                    Discover famous cities and their attractions.
+                </p>
+
+            </div>
+
+            <div class="activity-card" onclick="showActivity('Beach Holidays')">
+
+                <div class="activity-icon">🏖️</div>
+
+                <h3>Beach Holidays</h3>
+
+                <p>
+                    Relax near beautiful beaches and enjoy the sea.
+                </p>
+
+            </div>
+
+            <div class="activity-card" onclick="showActivity('Adventure')">
+
+                <div class="activity-icon">🎒</div>
+
+                <h3>Adventure</h3>
+
+                <p>
+                    Experience exciting activities and unforgettable
+                    adventures.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <h2>About Explore the World</h2>
+
+            <p>
+                Explore the World with Mahek is a travel and tourism
+                website created to help travelers discover beautiful
+                countries, famous destinations, delicious food,
+                comfortable hotels and exciting activities.
+                Our goal is to make travel information simple,
+                attractive and easy to explore.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a question? Send us a message.
+            </p>
+
+        </div>
+
+        <form class="contact-form" onsubmit="submitForm(event)">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Write your message..."
+                    required></textarea>
+
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Explore the World with Mahek</h3>
+
+        <p>
+            © 2026 Explore the World with Mahek. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function submitForm(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Thank you for contacting Explore the World with Mahek!"
+            );
+
+            event.target.reset();
+        }
+
+        function showActivity(activity) {
+
+            alert(
+                "You selected: " + activity +
+                "\n\nGet ready for an amazing travel experience!"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
