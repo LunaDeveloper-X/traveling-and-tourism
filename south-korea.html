@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Korea | Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .country-hero {
+            min-height: 70vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .country-hero-content h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,.5);
+        }
+
+        .country-hero-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .country-intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .country-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .info-list {
+            max-width: 600px;
+            margin: 25px auto;
+            padding-left: 20px;
+            text-align: left;
+            color: #555;
+            line-height: 1.9;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+        }
+
+        .place-card > img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .place-content {
+            padding: 25px;
+        }
+
+        .place-content h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+
+        .place-content p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .details-box {
+            display: none;
+            background: #f5f7f8;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        .details-box.show {
+            display: block;
+        }
+
+        .details-box h4 {
+            color: #159895;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .details-box p {
+            margin: 0;
+        }
+
+        .section-alt {
+            background: #eef7f7;
+        }
+
+        @media (max-width: 900px) {
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero-content h1 {
+                font-size: 55px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .country-hero-content h1 {
+                font-size: 42px;
+            }
+
+            .country-hero-content p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="logo">Explore the World</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#countries">Countries</a>
+            <a href="index.html#destinations">Destinations</a>
+            <a href="index.html#hotels">Hotels</a>
+            <a href="index.html#food">Food</a>
+            <a href="index.html#activities">Activities</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="country-hero">
+
+        <div class="country-hero-content">
+
+            <h1>South Korea</h1>
+
+            <p>
+                Explore South Korea, a fascinating country known for its
+                modern cities, ancient palaces, beautiful mountains,
+                delicious cuisine and unique culture.
+            </p>
+
+            <a href="index.html#countries" class="hero-button">
+                ← Back to Countries
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <div class="country-intro">
+
+            <h2>About South Korea</h2>
+
+            <p>
+                South Korea combines ancient traditions with modern
+                technology and vibrant city life. From the busy streets
+                of Seoul to peaceful temples and beautiful coastal areas,
+                the country offers a wide variety of experiences.
+            </p>
+
+            <ul class="info-list">
+                <li><strong>Capital:</strong> Seoul</li>
+                <li><strong>Largest City:</strong> Seoul</li>
+                <li><strong>Region:</strong> East Asia</li>
+                <li><strong>Famous For:</strong> K-pop, technology, food and culture</li>
+                <li><strong>Popular Destination:</strong> Seoul and Jeju Island</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAMOUS PLACES -->
+
+    <section class="section section-alt">
+
+        <h2>Famous Places in South Korea</h2>
+
+        <p class="section-description">
+            Discover some of the most popular destinations in South Korea.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- SEOUL -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Seoul"
+                >
+
+                <div class="place-content">
+
+                    <h3>Seoul</h3>
+
+                    <p>
+                        Seoul is the capital of South Korea and a lively
+                        city where historic palaces stand alongside modern
+                        skyscrapers and shopping districts.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=600&q=80" alt="Seoul">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Seoul City">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="South Korea">
+
+                        <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?auto=format&fit=crop&w=600&q=80" alt="Seoul">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Seoul">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Seoul Travel">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('seoulDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="seoulDetails">
+
+                        <h4>About Seoul</h4>
+
+                        <p>
+                            Seoul is the political, cultural and economic
+                            center of South Korea. Famous attractions include
+                            Gyeongbokgung Palace, N Seoul Tower, Myeongdong,
+                            Bukchon Hanok Village and the Han River.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSAN -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=1000&q=85"
+                    alt="Busan"
+                >
+
+                <div class="place-content">
+
+                    <h3>Busan</h3>
+
+                    <p>
+                        Busan is a coastal city famous for beaches, seafood,
+                        colorful neighborhoods and beautiful ocean views.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="Busan">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Busan City">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=600&q=80" alt="South Korea">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Korean City">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Korea Travel">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('busanDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="busanDetails">
+
+                        <h4>About Busan</h4>
+
+                        <p>
+                            Busan is South Korea's major port city and is
+                            known for Haeundae Beach, Gamcheon Culture Village,
+                            seafood markets and beautiful coastal scenery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JEJU ISLAND -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?auto=format&fit=crop&w=1000&q=85"
+                    alt="Jeju Island"
+                >
+
+                <div class="place-content">
+
+                    <h3>Jeju Island</h3>
+
+                    <p>
+                        Jeju Island is known for volcanic landscapes,
+                        waterfalls, beaches and beautiful natural scenery.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?auto=format&fit=crop&w=600&q=80" alt="Jeju Island">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="Jeju">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Island">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Korean Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="South Korea">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('jejuDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="jejuDetails">
+
+                        <h4>About Jeju Island</h4>
+
+                        <p>
+                            Jeju is a volcanic island famous for Hallasan
+                            Mountain, waterfalls, lava formations and
+                            peaceful coastal scenery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GYEONGJU -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=1000&q=85"
+                    alt="Gyeongju"
+                >
+
+                <div class="place-content">
+
+                    <h3>Gyeongju</h3>
+
+                    <p>
+                        Gyeongju is a historic city filled with ancient
+                        temples, royal tombs and traditional Korean heritage.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Gyeongju">
+
+                        <img src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="Korean City">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="Korean Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="South Korea">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('gyeongjuDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="gyeongjuDetails">
+
+                        <h4>About Gyeongju</h4>
+
+                        <p>
+                            Gyeongju was the capital of the ancient Silla
+                            Kingdom and contains many important cultural
+                            and historical sites.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORICAL PLACES -->
+
+    <section class="section">
+
+        <h2>Historical Places in South Korea</h2>
+
+        <p class="section-description">
+            Explore South Korea's historic palaces, temples and traditional
+            villages.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- GYEONGBOKGUNG -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Gyeongbokgung Palace"
+                >
+
+                <div class="place-content">
+
+                    <h3>Gyeongbokgung Palace</h3>
+
+                    <p>
+                        A magnificent royal palace and one of Seoul's most
+                        important historical attractions.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="Gyeongbokgung Palace">
+
+                        <img src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=600&q=80" alt="Seoul">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Korean Heritage">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Seoul">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('palaceDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="palaceDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Gyeongbokgung is one of Seoul's most important
+                            royal palaces and an important symbol of Korean
+                            history and architecture.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUKCHON -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=1000&q=85"
+                    alt="Bukchon Hanok Village"
+                >
+
+                <div class="place-content">
+
+                    <h3>Bukchon Hanok Village</h3>
+
+                    <p>
+                        A traditional neighborhood in Seoul filled with
+                        beautiful Korean houses known as hanok.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Bukchon">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="Korean Village">
+
+                        <img src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=600&q=80" alt="Seoul">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Traditional Korea">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="Korean City">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('bukchonDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="bukchonDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Bukchon Hanok Village preserves traditional Korean
+                            architecture and provides a glimpse into historic
+                            Seoul.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BULGUKSA -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=1000&q=85"
+                    alt="Bulguksa Temple"
+                >
+
+                <div class="place-content">
+
+                    <h3>Bulguksa Temple</h3>
+
+                    <p>
+                        A famous Buddhist temple connected with the history
+                        and culture of the Silla period.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1601621915196-2621bfb0cd0d?auto=format&fit=crop&w=600&q=80" alt="Bulguksa Temple">
+
+                        <img src="https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?auto=format&fit=crop&w=600&q=80" alt="Temple">
+
+                        <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                        <img src="https://images.unsplash.com/photo-1538485399081-7c897f0d9e6b?auto=format&fit=crop&w=600&q=80" alt="South Korea">
+
+                        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80" alt="Korean Heritage">
+
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Korea">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('bulguksaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="bulguksaDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Bulguksa is an important Buddhist temple and
+                            UNESCO World Heritage site associated with the
+                            Silla Kingdom.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAMOUS RESTAURANTS -->
+
+    <section class="section section-alt">
+
+        <h2>Famous Restaurants in South Korea</h2>
+
+        <p class="section-description">
+            Experience Korean cuisine at some well-known dining destinations.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- Gwangjang Market -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Korean Food Market"
+                >
+
+                <div class="place-content">
+
+                    <h3>Gwangjang Market</h3>
+
+                    <p>
+                        A famous Seoul market where visitors can enjoy
+                        traditional Korean street food.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Korean Meal">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Dining">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('gwangjangDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="gwangjangDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Gwangjang Market is one of Seoul's famous food
+                            destinations, offering traditional Korean snacks,
+                            noodles and other local dishes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mingles -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85"
+                    alt="Korean Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Mingles</h3>
+
+                    <p>
+                        A Seoul restaurant known for modern interpretations
+                        of Korean cuisine.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Dining">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Korean Restaurant">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('minglesDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="minglesDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Mingles is associated with contemporary Korean
+                            cuisine and creative presentations of traditional
+                            Korean ingredients.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Korean BBQ -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85"
+                    alt="Korean BBQ"
+                >
+
+                <div class="place-content">
+
+                    <h3>Korean Barbecue Restaurant</h3>
+
+                    <p>
+                        Korean barbecue restaurants offer a popular dining
+                        experience where meat is grilled at the table.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Korean BBQ">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Korean Meal">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('bbqDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="bbqDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Korean barbecue is a popular dining style in
+                            which diners grill meat themselves at the table
+                            and enjoy it with side dishes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAMOUS FOOD -->
+
+    <section class="section">
+
+        <h2>Famous Korean Food</h2>
+
+        <p class="section-description">
+            Korean cuisine is famous for bold flavors, fermented foods,
+            rice dishes and delicious street food.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- KIMCHI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1000&q=85"
+                    alt="Kimchi"
+                >
+
+                <div class="place-content">
+
+                    <h3>Kimchi</h3>
+
+                    <p>
+                        Kimchi is a traditional Korean fermented vegetable
+                        dish and one of the country's most famous foods.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Kimchi">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Korean Meal">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Korean BBQ">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('kimchiDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="kimchiDetails">
+
+                        <h4>About Kimchi</h4>
+
+                        <p>
+                            Kimchi is traditionally made by fermenting
+                            vegetables with seasonings. It is served as a
+                            side dish with many Korean meals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BIBIMBAP -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1000&q=85"
+                    alt="Bibimbap"
+                >
+
+                <div class="place-content">
+
+                    <h3>Bibimbap</h3>
+
+                    <p>
+                        Bibimbap is a Korean rice dish usually served with
+                        vegetables, meat, egg and flavorful sauce.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Bibimbap">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Korean Meal">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Korean BBQ">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant Food">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('bibimbapDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="bibimbapDetails">
+
+                        <h4>About Bibimbap</h4>
+
+                        <p>
+                            Bibimbap combines rice with vegetables, protein
+                            and sauce. The ingredients are mixed together
+                            before eating.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TTEOKBOKKI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Tteokbokki"
+                >
+
+                <div class="place-content">
+
+                    <h3>Tteokbokki</h3>
+
+                    <p>
+                        Tteokbokki is a popular Korean street food made from
+                        chewy rice cakes cooked in a spicy sauce.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Tteokbokki">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Korean BBQ">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('tteokbokkiDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="tteokbokkiDetails">
+
+                        <h4>About Tteokbokki</h4>
+
+                        <p>
+                            Tteokbokki is made with rice cakes and is commonly
+                            cooked in a spicy and slightly sweet Korean sauce.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KOREAN BBQ FOOD -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85"
+                    alt="Korean Barbecue"
+                >
+
+                <div class="place-content">
+
+                    <h3>Korean Barbecue</h3>
+
+                    <p>
+                        Korean barbecue is a famous dining experience
+                        featuring grilled meat and a variety of side dishes.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Korean BBQ">
+
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=600&q=80" alt="Korean Food">
+
+                        <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=600&q=80" alt="Korean Dish">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('koreanBbqDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="koreanBbqDetails">
+
+                        <h4>About Korean Barbecue</h4>
+
+                        <p>
+                            Korean barbecue commonly features grilled meat
+                            served with vegetables, sauces and numerous
+                            traditional side dishes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- END -->
+
+    <section class="contact">
+
+        <h2>Explore South Korea</h2>
+
+        <p>
+            Discover the culture, history, food and beautiful destinations
+            of South Korea.
+        </p>
+
+        <a href="index.html#countries" class="hero-button">
+            ← Back to Countries
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Explore the World</h3>
+
+        <p>
+            Discover beautiful places around the world.
+        </p>
+
+        <p>
+            © 2026 Explore the World. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        function toggleDetails(id) {
+
+            const box = document.getElementById(id);
+
+            if (box.classList.contains("show")) {
+                box.classList.remove("show");
+            } else {
+                box.classList.add("show");
+            }
+
+        }
+    </script>
+
+</body>
+</html>

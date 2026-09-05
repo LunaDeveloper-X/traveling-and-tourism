@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Arab Emirates - Explore the World</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f7f8;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #159895;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #159895;
+        }
+
+        .hero {
+            min-height: 70vh;
+            background-image:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,.5);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 25px;
+            background-color: #159895;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #0d7775;
+        }
+
+        .section {
+            padding: 70px 60px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .info-box {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.1);
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .info-box strong {
+            color: #159895;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.1);
+            text-align: left;
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0,0,0,.18);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .card-content h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .facts {
+            background-color: #eef7f7;
+        }
+
+        .fact-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .fact {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,.08);
+        }
+
+        .fact h3 {
+            color: #159895;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin: 8px;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .fact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 50px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                font-size: 17px;
+            }
+
+            .cards,
+            .fact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Explore the World</div>
+
+    <nav>
+        <a href="index.html#countries">← Back to Countries</a>
+        <a href="#places">Places</a>
+        <a href="#history">History</a>
+        <a href="#restaurants">Restaurants</a>
+        <a href="#food">Food</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>United Arab Emirates</h1>
+
+        <p>
+            Discover modern cities, beautiful deserts, impressive architecture,
+            rich traditions, historical sites and delicious Emirati cuisine.
+        </p>
+
+        <a href="index.html#countries" class="back-button">
+            ← Back to Countries
+        </a>
+    </div>
+</section>
+
+
+<!-- OVERVIEW -->
+<section class="section">
+    <h2>About United Arab Emirates</h2>
+
+    <p class="section-description">
+        The United Arab Emirates is a country in the Arabian Peninsula known
+        for its modern cities, desert landscapes, traditional culture and
+        famous landmarks.
+    </p>
+
+    <div class="info-box">
+        <p>
+            The <strong>United Arab Emirates</strong> is made up of seven emirates.
+            Dubai and Abu Dhabi are among its best-known cities. Visitors can
+            experience skyscrapers, traditional markets, desert adventures,
+            beaches, museums and historic buildings.
+        </p>
+    </div>
+</section>
+
+
+<!-- FACTS -->
+<section class="section facts">
+    <h2>Useful Facts</h2>
+
+    <div class="fact-grid">
+
+        <div class="fact">
+            <h3>Capital</h3>
+            <p>Abu Dhabi</p>
+        </div>
+
+        <div class="fact">
+            <h3>Famous City</h3>
+            <p>Dubai</p>
+        </div>
+
+        <div class="fact">
+            <h3>Currency</h3>
+            <p>United Arab Emirates Dirham</p>
+        </div>
+
+        <div class="fact">
+            <h3>Language</h3>
+            <p>Arabic</p>
+        </div>
+
+        <div class="fact">
+            <h3>Famous For</h3>
+            <p>Skyscrapers, deserts, shopping and modern architecture</p>
+        </div>
+
+        <div class="fact">
+            <h3>Best Experience</h3>
+            <p>Desert safari and exploring modern cities</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FAMOUS PLACES -->
+<section class="section" id="places">
+    <h2>Famous Places</h2>
+
+    <p class="section-description">
+        Explore some of the most famous destinations in the United Arab Emirates.
+    </p>
+
+    <div class="cards">
+
+        <!-- DUBAI -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85"
+                 alt="Dubai">
+
+            <div class="card-content">
+                <h3>Dubai</h3>
+
+                <p>
+                    A world-famous city known for its impressive skyline,
+                    shopping malls, beaches and modern attractions.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Dubai">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=80" alt="Dubai skyline">
+                    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=500&q=80" alt="Dubai">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Dubai city">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=80" alt="Dubai buildings">
+                    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=500&q=80" alt="Dubai architecture">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ABU DHABI -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85"
+                 alt="Abu Dhabi">
+
+            <div class="card-content">
+                <h3>Abu Dhabi</h3>
+
+                <p>
+                    The capital city of the United Arab Emirates, famous for
+                    grand architecture, museums and cultural attractions.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi city">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi architecture">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi landmark">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SHARJAH -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85"
+                 alt="Sharjah">
+
+            <div class="card-content">
+                <h3>Sharjah</h3>
+
+                <p>
+                    A cultural destination known for museums, traditional
+                    architecture, art and heritage.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Sharjah">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Sharjah">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Sharjah">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Sharjah city">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Sharjah culture">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Sharjah landmark">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HISTORICAL PLACES -->
+<section class="section facts" id="history">
+    <h2>Historical Places</h2>
+
+    <p class="section-description">
+        Discover the heritage and history of the United Arab Emirates.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=85"
+                 alt="Al Fahidi Historical Area">
+
+            <div class="card-content">
+                <h3>Al Fahidi Historical Area</h3>
+
+                <p>
+                    A historic area of Dubai where visitors can see traditional
+                    buildings, narrow lanes and cultural heritage.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Al Fahidi">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Historic Dubai">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="UAE heritage">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Historic area">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Dubai heritage">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Historic UAE">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=900&q=85"
+                 alt="Heritage of United Arab Emirates">
+
+            <div class="card-content">
+                <h3>Qasr Al Hosn</h3>
+
+                <p>
+                    One of Abu Dhabi's important historic landmarks, representing
+                    the city's early history and development.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Qasr Al Hosn">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi heritage">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="UAE history">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=500&q=80" alt="Historic landmark">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Abu Dhabi history">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="UAE landmark">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- RESTAURANTS -->
+<section class="section" id="restaurants">
+    <h2>Famous Restaurants</h2>
+
+    <p class="section-description">
+        The United Arab Emirates offers restaurants ranging from traditional
+        Emirati cuisine to international fine dining.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+                 alt="Emirati restaurant">
+
+            <div class="card-content">
+                <h3>Emirati Cuisine Restaurant</h3>
+
+                <p>
+                    Try traditional Emirati dishes and experience local
+                    hospitality and flavors.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="Food">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Restaurant food">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Traditional food">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="Emirati meal">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Food dish">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Restaurant dish">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85"
+                 alt="Fine dining restaurant">
+
+            <div class="card-content">
+                <h3>Dubai Fine Dining</h3>
+
+                <p>
+                    Dubai is home to many luxury restaurants offering
+                    international cuisine and memorable dining experiences.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=500&q=80" alt="Fine dining">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" alt="Dining">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=500&q=80" alt="Restaurant interior">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Luxury restaurant">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" alt="Fine dining food">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOD -->
+<section class="section facts" id="food">
+    <h2>Famous Food</h2>
+
+    <p class="section-description">
+        Enjoy traditional dishes and flavors commonly associated with Emirati cuisine.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+                 alt="Machboos">
+
+            <div class="card-content">
+                <h3>Machboos</h3>
+
+                <p>
+                    A popular rice dish prepared with spices and meat, chicken
+                    or seafood.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Machboos">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="Rice dish">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Food">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Traditional meal">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="UAE food">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Rice food">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+                 alt="Luqaimat">
+
+            <div class="card-content">
+                <h3>Luqaimat</h3>
+
+                <p>
+                    Small sweet dumplings traditionally served with syrup,
+                    honey or other sweet toppings.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Luqaimat">
+                    <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=500&q=80" alt="Sweet">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Sweet dumplings">
+                    <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=500&q=80" alt="Traditional dessert">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="UAE dessert">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    <h3>Explore the World</h3>
+    <p>Discover amazing countries, places, food and cultures.</p>
+    <p>© 2026 Explore the World. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

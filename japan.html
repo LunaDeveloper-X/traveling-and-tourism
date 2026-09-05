@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan | Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .country-hero {
+            min-height: 70vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .country-hero-content h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,.5);
+        }
+
+        .country-hero-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .country-intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .country-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .info-list {
+            max-width: 600px;
+            margin: 25px auto;
+            padding-left: 20px;
+            text-align: left;
+            color: #555;
+            line-height: 1.9;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+        }
+
+        .place-card > img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .place-content {
+            padding: 25px;
+        }
+
+        .place-content h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+
+        .place-content p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .details-box {
+            display: none;
+            background: #f5f7f8;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        .details-box.show {
+            display: block;
+        }
+
+        .details-box h4 {
+            color: #159895;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .details-box p {
+            margin: 0;
+        }
+
+        .section-alt {
+            background: #eef7f7;
+        }
+
+        @media (max-width: 900px) {
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero-content h1 {
+                font-size: 55px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .country-hero-content h1 {
+                font-size: 42px;
+            }
+
+            .country-hero-content p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="logo">Explore the World</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#countries">Countries</a>
+            <a href="index.html#destinations">Destinations</a>
+            <a href="index.html#hotels">Hotels</a>
+            <a href="index.html#food">Food</a>
+            <a href="index.html#activities">Activities</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="country-hero">
+
+        <div class="country-hero-content">
+
+            <h1>Japan</h1>
+
+            <p>
+                Discover Japan, a fascinating country where ancient
+                traditions meet modern technology, beautiful nature,
+                historic temples and exciting cities.
+            </p>
+
+            <a href="index.html#countries" class="hero-button">
+                ← Back to Countries
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT JAPAN -->
+
+    <section class="section">
+
+        <div class="country-intro">
+
+            <h2>About Japan</h2>
+
+            <p>
+                Japan is an island country in East Asia known for its
+                ancient traditions, modern cities, beautiful mountains,
+                cherry blossoms, temples and unique cuisine.
+            </p>
+
+            <ul class="info-list">
+                <li><strong>Capital:</strong> Tokyo</li>
+                <li><strong>Largest City:</strong> Tokyo</li>
+                <li><strong>Region:</strong> East Asia</li>
+                <li><strong>Famous For:</strong> Technology, anime, temples and cuisine</li>
+                <li><strong>Popular Destination:</strong> Tokyo and Kyoto</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAMOUS PLACES -->
+
+    <section class="section section-alt">
+
+        <h2>Famous Places in Japan</h2>
+
+        <p class="section-description">
+            Explore some of Japan's most famous cities and beautiful
+            destinations.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- TOKYO -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1000&q=85"
+                    alt="Tokyo"
+                >
+
+                <div class="place-content">
+
+                    <h3>Tokyo</h3>
+
+                    <p>
+                        Tokyo is Japan's capital and one of the world's
+                        largest and most exciting metropolitan cities.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80" alt="Tokyo">
+
+                        <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=600&q=80" alt="Tokyo">
+
+                        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=600&q=80" alt="Tokyo City">
+
+                        <img src="https://images.unsplash.com/photo-1536098561742-8b9c8d1b0f9e?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=600&q=80" alt="Tokyo">
+
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Japan Travel">
+
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=600&q=80" alt="Tokyo Travel">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('tokyoDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="tokyoDetails">
+
+                        <h4>About Tokyo</h4>
+
+                        <p>
+                            Tokyo is famous for Shibuya Crossing, Tokyo
+                            Tower, Senso-ji Temple, shopping districts,
+                            technology and Japanese pop culture.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KYOTO -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85"
+                    alt="Kyoto"
+                >
+
+                <div class="place-content">
+
+                    <h3>Kyoto</h3>
+
+                    <p>
+                        Kyoto is famous for traditional Japanese temples,
+                        gardens, shrines and historic neighborhoods.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Kyoto">
+
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=600&q=80" alt="Kyoto">
+
+                        <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?auto=format&fit=crop&w=600&q=80" alt="Kyoto">
+
+                        <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=600&q=80" alt="Japan Mountain">
+
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Japanese Temple">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('kyotoDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="kyotoDetails">
+
+                        <h4>About Kyoto</h4>
+
+                        <p>
+                            Kyoto was the imperial capital of Japan for many
+                            centuries. It is known for traditional wooden
+                            houses, temples, gardens and cultural heritage.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOUNT FUJI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1000&q=85"
+                    alt="Mount Fuji"
+                >
+
+                <div class="place-content">
+
+                    <h3>Mount Fuji</h3>
+
+                    <p>
+                        Mount Fuji is Japan's highest mountain and one of
+                        the country's most recognizable natural landmarks.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=600&q=80" alt="Mount Fuji">
+
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?auto=format&fit=crop&w=600&q=80" alt="Mount Fuji">
+
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Japanese Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=600&q=80" alt="Japan Nature">
+
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('fujiDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="fujiDetails">
+
+                        <h4>About Mount Fuji</h4>
+
+                        <p>
+                            Mount Fuji is a famous symbol of Japan. Its
+                            symmetrical volcanic shape has inspired Japanese
+                            art and culture for centuries.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OSAKA -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1000&q=85"
+                    alt="Osaka"
+                >
+
+                <div class="place-content">
+
+                    <h3>Osaka</h3>
+
+                    <p>
+                        Osaka is a lively Japanese city known for food,
+                        entertainment, shopping and Osaka Castle.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=600&q=80" alt="Osaka">
+
+                        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=600&q=80" alt="Japan City">
+
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80" alt="Japanese City">
+
+                        <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=600&q=80" alt="Osaka">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('osakaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="osakaDetails">
+
+                        <h4>About Osaka</h4>
+
+                        <p>
+                            Osaka is known for its friendly atmosphere,
+                            street food, shopping districts and landmarks
+                            such as Osaka Castle.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORICAL PLACES -->
+
+    <section class="section">
+
+        <h2>Historical Places in Japan</h2>
+
+        <p class="section-description">
+            Discover Japan's ancient temples, castles and traditional
+            cultural landmarks.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- FUSHIMI INARI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=1000&q=85"
+                    alt="Fushimi Inari Shrine"
+                >
+
+                <div class="place-content">
+
+                    <h3>Fushimi Inari Shrine</h3>
+
+                    <p>
+                        A famous Kyoto shrine recognized for its thousands
+                        of bright torii gates.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=600&q=80" alt="Fushimi Inari">
+
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Kyoto">
+
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=600&q=80" alt="Japanese Temple">
+
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?auto=format&fit=crop&w=600&q=80" alt="Kyoto">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('inariDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="inariDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Fushimi Inari is one of Kyoto's best-known
+                            Shinto shrines and is famous for its long paths
+                            lined with torii gates.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KINKAKU-JI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1000&q=85"
+                    alt="Kinkaku-ji"
+                >
+
+                <div class="place-content">
+
+                    <h3>Kinkaku-ji</h3>
+
+                    <p>
+                        Kinkaku-ji, also known as the Golden Pavilion, is
+                        one of Kyoto's most famous landmarks.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80" alt="Kinkaku-ji">
+
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Kyoto">
+
+                        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Japanese Temple">
+
+                        <img src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=600&q=80" alt="Japanese Culture">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('kinkakuDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="kinkakuDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Kinkaku-ji is a historic Zen Buddhist temple
+                            in Kyoto and is particularly famous for its
+                            gold-covered upper floors.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HIROSHIMA PEACE MEMORIAL -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=1000&q=85"
+                    alt="Hiroshima"
+                >
+
+                <div class="place-content">
+
+                    <h3>Hiroshima Peace Memorial</h3>
+
+                    <p>
+                        A significant historical site that represents the
+                        history and remembrance of Hiroshima.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=600&q=80" alt="Hiroshima">
+
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Japanese Heritage">
+
+                        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=600&q=80" alt="Japan">
+
+                        <img src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?auto=format&fit=crop&w=600&q=80" alt="Japanese Landscape">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('hiroshimaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="hiroshimaDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            The Hiroshima Peace Memorial area serves as a
+                            place of remembrance and promotes the message
+                            of peace.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAMOUS RESTAURANTS -->
+
+    <section class="section section-alt">
+
+        <h2>Famous Restaurants in Japan</h2>
+
+        <p class="section-description">
+            Experience Japanese cuisine through traditional and modern
+            dining experiences.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- SUSHI RESTAURANT -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1000&q=85"
+                    alt="Japanese Sushi Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Traditional Sushi Restaurant</h3>
+
+                    <p>
+                        Japan is famous for sushi restaurants that focus
+                        on fresh ingredients and careful preparation.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Japanese Meal">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('sushiRestaurantDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="sushiRestaurantDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Traditional sushi restaurants focus on fresh
+                            seafood, carefully prepared rice and precise
+                            presentation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RAMEN -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1000&q=85"
+                    alt="Ramen Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Ramen Restaurant</h3>
+
+                    <p>
+                        Ramen restaurants are popular throughout Japan,
+                        offering different regional styles of noodles
+                        and broth.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="Ramen">
+
+                        <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=600&q=80" alt="Ramen">
+
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Japanese Meal">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('ramenRestaurantDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="ramenRestaurantDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Ramen shops are a major part of Japanese food
+                            culture, with many regions offering their own
+                            styles and flavors.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IZAKAYA -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85"
+                    alt="Japanese Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Izakaya</h3>
+
+                    <p>
+                        Izakayas are Japanese casual dining establishments
+                        offering a variety of small dishes and drinks.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Izakaya">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Japanese Meal">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('izakayaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="izakayaDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Izakayas provide a relaxed atmosphere and
+                            commonly serve a variety of Japanese dishes
+                            designed for sharing.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAMOUS FOOD -->
+
+    <section class="section">
+
+        <h2>Famous Japanese Food</h2>
+
+        <p class="section-description">
+            Japanese cuisine is famous around the world for its variety,
+            presentation and fresh ingredients.
+        </p>
+
+        <div class="places-grid">
+
+
+            <!-- SUSHI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1000&q=85"
+                    alt="Sushi"
+                >
+
+                <div class="place-content">
+
+                    <h3>Sushi</h3>
+
+                    <p>
+                        Sushi is one of Japan's most famous foods and is
+                        prepared in many different styles.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=600&q=80" alt="Japanese Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=600&q=80" alt="Sushi">
+
+                        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('sushiDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="sushiDetails">
+
+                        <h4>About Sushi</h4>
+
+                        <p>
+                            Sushi generally combines seasoned rice with
+                            seafood, vegetables or other ingredients and
+                            is prepared in many regional styles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RAMEN -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1000&q=85"
+                    alt="Ramen"
+                >
+
+                <div class="place-content">
+
+                    <h3>Ramen</h3>
+
+                    <p>
+                        Ramen is a popular Japanese noodle dish served
+                        with different broths and toppings.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="Ramen">
+
+                        <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=600&q=80" alt="Ramen">
+
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=600&q=80" alt="Noodles">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Japanese Meal">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('ramenDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="ramenDetails">
+
+                        <h4>About Ramen</h4>
+
+                        <p>
+                            Ramen consists of noodles served in broth with
+                            toppings such as meat, vegetables, eggs and
+                            other ingredients.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEMPURA -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85"
+                    alt="Tempura"
+                >
+
+                <div class="place-content">
+
+                    <h3>Tempura</h3>
+
+                    <p>
+                        Tempura is made by lightly battering and frying
+                        seafood or vegetables.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Tempura">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=600&q=80" alt="Japanese Dish">
+
+                        <img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=600&q=80" alt="Japanese Meal">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('tempuraDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="tempuraDetails">
+
+                        <h4>About Tempura</h4>
+
+                        <p>
+                            Tempura is a Japanese cooking style in which
+                            seafood or vegetables are coated in a light
+                            batter and fried until crisp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TAKOYAKI -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1000&q=85"
+                    alt="Japanese Street Food"
+                >
+
+                <div class="place-content">
+
+                    <h3>Takoyaki</h3>
+
+                    <p>
+                        Takoyaki is a popular Japanese street food
+                        especially associated with Osaka.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Japanese Dish">
+
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Japanese Food">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Japanese Restaurant">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('takoyakiDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="takoyakiDetails">
+
+                        <h4>About Takoyaki</h4>
+
+                        <p>
+                            Takoyaki consists of round batter-based pieces
+                            traditionally containing octopus and served
+                            with sauces and toppings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- END -->
+
+    <section class="contact">
+
+        <h2>Explore Japan</h2>
+
+        <p>
+            Discover Japan's cities, history, culture, food and beautiful
+            natural landscapes.
+        </p>
+
+        <a href="index.html#countries" class="hero-button">
+            ← Back to Countries
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Explore the World</h3>
+
+        <p>
+            Discover beautiful places around the world.
+        </p>
+
+        <p>
+            © 2026 Explore the World. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script>
+        function toggleDetails(id) {
+
+            const box = document.getElementById(id);
+
+            if (box.classList.contains("show")) {
+                box.classList.remove("show");
+            } else {
+                box.classList.add("show");
+            }
+
+        }
+    </script>
+
+</body>
+</html>

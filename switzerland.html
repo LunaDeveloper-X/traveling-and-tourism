@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switzerland - Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .country-hero {
+            min-height: 65vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero h1 {
+            font-size: 70px;
+            margin-bottom: 15px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,.6);
+        }
+
+        .country-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.7;
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 25px 60px;
+            color: #159895;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .back-link:hover {
+            color: #0d7775;
+        }
+
+        .country-intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .country-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .facts {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .fact-box {
+            background: white;
+            width: 210px;
+            padding: 25px 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .fact-box h3 {
+            color: #159895;
+            margin-bottom: 10px;
+        }
+
+        .fact-box p {
+            color: #666;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+            transition: .4s;
+            text-align: left;
+        }
+
+        .place-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.18);
+        }
+
+        .place-card h3 {
+            font-size: 25px;
+            margin: 20px 25px 10px;
+            color: #222;
+        }
+
+        .place-card > p {
+            margin: 0 25px 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .details-box {
+            display: none;
+            margin: 0 25px 20px;
+            padding: 18px;
+            background: #eef7f7;
+            border-radius: 10px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .details-button {
+            display: inline-block;
+            margin: 0 25px 25px;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 25px;
+            background: #159895;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .details-button:hover {
+            background: #0d7775;
+        }
+
+        @media (max-width: 800px) {
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .country-hero h1 {
+                font-size: 38px;
+            }
+
+            .gallery img {
+                height: 100px;
+            }
+
+            .back-link {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Explore the World</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#countries">Countries</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#hotels">Hotels</a>
+        <a href="index.html#food">Food</a>
+        <a href="index.html#activities">Activities</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<a href="index.html#countries" class="back-link">
+    ← Back to Countries
+</a>
+
+
+<!-- HERO -->
+
+<section class="country-hero">
+
+    <div>
+        <h1>Switzerland</h1>
+
+        <p>
+            Discover Switzerland's breathtaking mountains,
+            peaceful lakes, beautiful cities, historic places
+            and delicious Swiss food.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- ABOUT SWITZERLAND -->
+
+<section class="section">
+
+    <div class="country-intro">
+
+        <h2>About Switzerland</h2>
+
+        <p>
+            Switzerland is a beautiful country in Central Europe,
+            famous for the Alps, scenic lakes, charming villages,
+            historic cities and spectacular mountain landscapes.
+            It is also well known for chocolate, cheese, watches
+            and excellent transportation.
+        </p>
+
+
+        <div class="facts">
+
+            <div class="fact-box">
+                <h3>Capital</h3>
+                <p>Bern</p>
+            </div>
+
+            <div class="fact-box">
+                <h3>Languages</h3>
+                <p>German, French, Italian and Romansh</p>
+            </div>
+
+            <div class="fact-box">
+                <h3>Continent</h3>
+                <p>Europe</p>
+            </div>
+
+            <div class="fact-box">
+                <h3>Currency</h3>
+                <p>Swiss Franc</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAMOUS PLACES -->
+
+<section class="section">
+
+    <h2>Famous Places in Switzerland</h2>
+
+    <p class="section-description">
+        Explore Switzerland's beautiful cities, mountains,
+        lakes and unforgettable landscapes.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- ZURICH -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&w=700&q=80" alt="Zurich Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=700&q=80" alt="Zurich">
+
+                <img src="https://images.unsplash.com/photo-1500605502647-5a7e1f1e8b7d?auto=format&fit=crop&w=700&q=80" alt="Switzerland City">
+
+                <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=700&q=80" alt="Swiss City">
+
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Swiss Mountains">
+
+            </div>
+
+            <h3>Zurich</h3>
+
+            <p>
+                Switzerland's largest city, known for its
+                beautiful old town, lake and cultural attractions.
+            </p>
+
+            <div class="details-box">
+                Zurich combines a historic old town with a modern
+                city atmosphere. Visitors can enjoy Lake Zurich,
+                museums, shopping streets and beautiful views.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- INTERLAKEN -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=700&q=80" alt="Interlaken">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Swiss Alps">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Swiss Mountains">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Mountain Landscape">
+
+                <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=700&q=80" alt="Swiss Alps">
+
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+            </div>
+
+            <h3>Interlaken</h3>
+
+            <p>
+                A popular destination surrounded by mountains,
+                lakes and beautiful Swiss landscapes.
+            </p>
+
+            <div class="details-box">
+                Interlaken is situated between Lake Thun and Lake Brienz.
+                It is a popular base for exploring the surrounding Alps
+                and enjoying outdoor activities.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- LUCERNE -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=700&q=80" alt="Lucerne">
+
+                <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=700&q=80" alt="Lucerne Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&w=700&q=80" alt="Swiss City">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Swiss Mountains">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Swiss Landscape">
+
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+            </div>
+
+            <h3>Lucerne</h3>
+
+            <p>
+                A picturesque city famous for its lake,
+                mountains and historic wooden bridge.
+            </p>
+
+            <div class="details-box">
+                Lucerne is one of Switzerland's most scenic cities.
+                The old town, Lake Lucerne and surrounding mountains
+                make it a popular destination for visitors.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- ZERMATT -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=700&q=80" alt="Zermatt">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Matterhorn">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Swiss Alps">
+
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&w=700&q=80" alt="Swiss Mountains">
+
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=700&q=80" alt="Mountain">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Swiss Landscape">
+
+            </div>
+
+            <h3>Zermatt</h3>
+
+            <p>
+                A famous mountain resort known for the
+                Matterhorn and spectacular Alpine scenery.
+            </p>
+
+            <div class="details-box">
+                Zermatt is a famous Alpine resort and an excellent
+                destination for mountain scenery, skiing, hiking
+                and views of the Matterhorn.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORICAL PLACES -->
+
+<section class="section" style="background-color:#eef7f7;">
+
+    <h2>Historical Places</h2>
+
+    <p class="section-description">
+        Discover Switzerland's historic buildings,
+        old towns and cultural landmarks.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- CHILLON CASTLE -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=700&q=80" alt="Swiss Castle">
+
+                <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=700&q=80" alt="Castle Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=700&q=80" alt="Castle">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Swiss Castle">
+
+                <img src="https://images.unsplash.com/photo-1478827536114-da961b7e4e34?auto=format&fit=crop&w=700&q=80" alt="Historic Castle">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+            </div>
+
+            <h3>Chillon Castle</h3>
+
+            <p>
+                A historic castle located beside Lake Geneva,
+                surrounded by beautiful Alpine scenery.
+            </p>
+
+            <div class="details-box">
+                Chillon Castle is one of Switzerland's best-known
+                historic monuments. Its location beside Lake Geneva
+                makes it especially scenic.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- OLD TOWN BERN -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=700&q=80" alt="Bern">
+
+                <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=700&q=80" alt="Bern Old Town">
+
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=700&q=80" alt="Swiss Town">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Swiss City">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Swiss Landscape">
+
+            </div>
+
+            <h3>Old Town of Bern</h3>
+
+            <p>
+                A historic old town famous for medieval streets,
+                fountains, arcades and traditional buildings.
+            </p>
+
+            <div class="details-box">
+                Bern's historic old town is known for its medieval
+                urban character, arcades and historic architecture.
+                It is one of Switzerland's most important cultural areas.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- ZURICH OLD TOWN -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&w=700&q=80" alt="Zurich Old Town">
+
+                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=700&q=80" alt="Zurich">
+
+                <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=700&q=80" alt="Swiss City">
+
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=700&q=80" alt="Zurich Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Swiss Landscape">
+
+            </div>
+
+            <h3>Zurich Old Town</h3>
+
+            <p>
+                A charming historic area filled with narrow streets,
+                old buildings and cultural landmarks.
+            </p>
+
+            <div class="details-box">
+                Zurich's old town offers historic architecture,
+                narrow streets, churches, shops and restaurants.
+                It is a popular area for walking and sightseeing.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESTAURANTS -->
+
+<section class="section">
+
+    <h2>Famous Restaurants</h2>
+
+    <p class="section-description">
+        Discover Swiss dining and traditional cuisine.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- SWISS TRADITIONAL -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Swiss Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Restaurant Dining">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Swiss Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+            </div>
+
+            <h3>Traditional Swiss Restaurant</h3>
+
+            <p>
+                A traditional dining experience featuring
+                classic Swiss dishes and local specialties.
+            </p>
+
+            <div class="details-box">
+                Traditional Swiss restaurants often serve fondue,
+                raclette, rösti and other regional specialties in
+                a comfortable atmosphere.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- ZURICH DINING -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Zurich Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Swiss Dining">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Dining">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Swiss Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+            </div>
+
+            <h3>Zurich Dining</h3>
+
+            <p>
+                Zurich offers traditional Swiss dishes along
+                with modern international cuisine.
+            </p>
+
+            <div class="details-box">
+                Zurich has a diverse restaurant scene where visitors
+                can experience traditional Swiss cuisine as well as
+                modern European and international dishes.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- MOUNTAIN RESTAURANT -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=700&q=80" alt="Mountain Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Swiss Alps">
+
+                <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=700&q=80" alt="Mountain">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Alps">
+
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=700&q=80" alt="Switzerland">
+
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&w=700&q=80" alt="Swiss Mountains">
+
+            </div>
+
+            <h3>Swiss Mountain Restaurant</h3>
+
+            <p>
+                Enjoy Swiss specialties while surrounded
+                by beautiful mountain scenery.
+            </p>
+
+            <div class="details-box">
+                Mountain restaurants are popular in the Swiss Alps,
+                especially for visitors who want traditional food
+                with spectacular views.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAMOUS FOOD -->
+
+<section class="section" style="background-color:#eef7f7;">
+
+    <h2>Famous Swiss Food</h2>
+
+    <p class="section-description">
+        Taste some of Switzerland's most famous traditional foods.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- FONDUE -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?auto=format&fit=crop&w=700&q=80" alt="Cheese Fondue">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Swiss Food">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Swiss Dish">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Dining">
+
+            </div>
+
+            <h3>Cheese Fondue</h3>
+
+            <p>
+                Melted cheese served in a shared pot,
+                traditionally enjoyed with pieces of bread.
+            </p>
+
+            <div class="details-box">
+                Cheese fondue is one of Switzerland's most famous
+                dishes. It is traditionally prepared with melted cheese
+                and served with bread for dipping.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- RACLETTE -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?auto=format&fit=crop&w=700&q=80" alt="Raclette">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Swiss Food">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Swiss Meal">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Swiss Dining">
+
+            </div>
+
+            <h3>Raclette</h3>
+
+            <p>
+                A traditional Swiss dish featuring melted cheese,
+                commonly served with potatoes and vegetables.
+            </p>
+
+            <div class="details-box">
+                Raclette is a traditional Swiss cheese dish.
+                Melted cheese is commonly served with potatoes,
+                vegetables and other accompaniments.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- ROSTI -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Rosti">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Swiss Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Swiss Dish">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Restaurant Food">
+
+                <img src="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?auto=format&fit=crop&w=700&q=80" alt="Swiss Cheese">
+
+            </div>
+
+            <h3>Rösti</h3>
+
+            <p>
+                A traditional Swiss potato dish that is crispy
+                on the outside and soft inside.
+            </p>
+
+            <div class="details-box">
+                Rösti is a well-known Swiss potato dish. It is made
+                from grated potatoes that are cooked until golden
+                and crispy.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- SWISS CHOCOLATE -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1548907040-4d42f9b8c0a1?auto=format&fit=crop&w=700&q=80" alt="Swiss Chocolate">
+
+                <img src="https://images.unsplash.com/photo-1575377222312-dd1a0a7c3b6b?auto=format&fit=crop&w=700&q=80" alt="Chocolate">
+
+                <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=700&q=80" alt="Chocolate">
+
+                <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=700&q=80" alt="Swiss Chocolate">
+
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=700&q=80" alt="Chocolate">
+
+                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=80" alt="Chocolate Dessert">
+
+            </div>
+
+            <h3>Swiss Chocolate</h3>
+
+            <p>
+                Switzerland is famous around the world for
+                its high-quality chocolate.
+            </p>
+
+            <div class="details-box">
+                Swiss chocolate has a strong international reputation.
+                Visitors can find chocolate shops and producers in
+                many Swiss cities and tourist destinations.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Explore the World</h3>
+
+    <p>
+        Discover beautiful countries, amazing destinations,
+        delicious food and unforgettable experiences.
+    </p>
+
+    <p>
+        © 2026 Explore the World. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    const buttons = document.querySelectorAll(".details-button");
+
+    buttons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const details = button.previousElementSibling;
+
+            if (details.style.display === "block") {
+
+                details.style.display = "none";
+                button.textContent = "View Details";
+
+            } else {
+
+                details.style.display = "block";
+                button.textContent = "Hide Details";
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

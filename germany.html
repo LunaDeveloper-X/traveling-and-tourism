@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germany - Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .country-hero {
+            min-height: 65vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero h1 {
+            font-size: 70px;
+            margin-bottom: 15px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,.6);
+        }
+
+        .country-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.7;
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 25px 60px;
+            color: #159895;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .back-link:hover {
+            color: #0d7775;
+        }
+
+        .country-intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .country-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+            transition: .4s;
+        }
+
+        .place-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.18);
+        }
+
+        .place-card h3 {
+            font-size: 25px;
+            margin: 20px 25px 10px;
+            color: #222;
+        }
+
+        .place-card > p {
+            margin: 0 25px 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .details-box {
+            display: none;
+            margin: 0 25px 20px;
+            padding: 18px;
+            background: #eef7f7;
+            border-radius: 10px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .details-button {
+            display: inline-block;
+            margin: 0 25px 25px;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 25px;
+            background: #159895;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .details-button:hover {
+            background: #0d7775;
+        }
+
+        .facts {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .fact-box {
+            background: white;
+            width: 210px;
+            padding: 25px 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .fact-box h3 {
+            color: #159895;
+            margin-bottom: 10px;
+        }
+
+        .fact-box p {
+            color: #666;
+        }
+
+        @media (max-width: 800px) {
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .country-hero h1 {
+                font-size: 38px;
+            }
+
+            .gallery img {
+                height: 100px;
+            }
+
+            .back-link {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Explore the World</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#countries">Countries</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#hotels">Hotels</a>
+        <a href="index.html#food">Food</a>
+        <a href="index.html#activities">Activities</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<a href="index.html#countries" class="back-link">
+    ← Back to Countries
+</a>
+
+
+<!-- HERO -->
+
+<section class="country-hero">
+    <div>
+        <h1>Germany</h1>
+        <p>
+            Discover Germany's beautiful cities, historic castles,
+            fascinating culture and delicious traditional food.
+        </p>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+    <div class="country-intro">
+
+        <h2>About Germany</h2>
+
+        <p>
+            Germany is a country in Central Europe known for its rich history,
+            beautiful architecture, historic towns, castles, museums and
+            diverse landscapes. From modern cities such as Berlin and Munich
+            to fairy-tale castles and charming old towns, Germany offers
+            many experiences for travelers.
+        </p>
+
+        <div class="facts">
+
+            <div class="fact-box">
+                <h3>Capital</h3>
+                <p>Berlin</p>
+            </div>
+
+            <div class="fact-box">
+                <h3>Language</h3>
+                <p>German</p>
+            </div>
+
+            <div class="fact-box">
+                <h3>Continent</h3>
+                <p>Europe</p>
+            </div>
+
+            <div class="fact-box">
+                <h3>Currency</h3>
+                <p>Euro</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAMOUS PLACES -->
+
+<section class="section">
+
+    <h2>Famous Places in Germany</h2>
+
+    <p class="section-description">
+        Explore some of Germany's most popular cities and tourist attractions.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- BERLIN -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1566404791232-af9fe5f1a3f1?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+            </div>
+
+            <h3>Berlin</h3>
+
+            <p>
+                Germany's capital city, famous for its history,
+                museums, architecture and vibrant culture.
+            </p>
+
+            <div class="details-box">
+                Berlin is one of Germany's most important cultural and
+                historical cities. Visitors can explore the Brandenburg Gate,
+                Museum Island, the Reichstag and many other attractions.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- NEUSCHWANSTEIN -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=700&q=80" alt="Neuschwanstein Castle">
+
+                <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=700&q=80" alt="Neuschwanstein Castle">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Germany Castle">
+
+                <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=700&q=80" alt="Castle">
+
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=700&q=80" alt="Germany">
+
+                <img src="https://images.unsplash.com/photo-1478827536114-da961b7e4e34?auto=format&fit=crop&w=700&q=80" alt="German Castle">
+
+            </div>
+
+            <h3>Neuschwanstein Castle</h3>
+
+            <p>
+                A famous fairy-tale castle in Bavaria surrounded
+                by beautiful mountains and forests.
+            </p>
+
+            <div class="details-box">
+                Neuschwanstein Castle is one of Germany's best-known
+                castles. Its dramatic mountain setting and romantic
+                architecture make it one of the country's most popular
+                attractions.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- ROTHENBURG -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1595867818082-083862f3d630?auto=format&fit=crop&w=700&q=80" alt="Rothenburg Germany">
+
+                <img src="https://images.unsplash.com/photo-1519671282428-2f7f1c5f4a8c?auto=format&fit=crop&w=700&q=80" alt="Germany Town">
+
+                <img src="https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&w=700&q=80" alt="German Town">
+
+                <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=700&q=80" alt="Old Town">
+
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=700&q=80" alt="Germany City">
+
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80" alt="German Streets">
+
+            </div>
+
+            <h3>Rothenburg ob der Tauber</h3>
+
+            <p>
+                A charming historic town known for its medieval streets,
+                colorful buildings and traditional atmosphere.
+            </p>
+
+            <div class="details-box">
+                Rothenburg ob der Tauber is famous for its preserved
+                medieval appearance. Its old streets, traditional houses
+                and historic walls make it a popular destination.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- HAMBURG -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=700&q=80" alt="Hamburg">
+
+                <img src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?auto=format&fit=crop&w=700&q=80" alt="Hamburg">
+
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=700&q=80" alt="Germany">
+
+                <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=700&q=80" alt="City">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Germany">
+
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80" alt="Hamburg">
+
+            </div>
+
+            <h3>Hamburg</h3>
+
+            <p>
+                A major German city known for its harbor,
+                waterways, architecture and lively cultural scene.
+            </p>
+
+            <div class="details-box">
+                Hamburg is one of Germany's major cities and an important
+                port. The city is known for its harbor, museums, historic
+                buildings and waterfront areas.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORICAL PLACES -->
+
+<section class="section" style="background-color:#eef7f7;">
+
+    <h2>Historical Places</h2>
+
+    <p class="section-description">
+        Discover Germany's historic landmarks, castles and cultural sites.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- BRANDENBURG GATE -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=700&q=80" alt="Brandenburg Gate">
+
+                <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=700&q=80" alt="Berlin Gate">
+
+                <img src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1566404791232-af9fe5f1a3f1?auto=format&fit=crop&w=700&q=80" alt="Germany">
+
+                <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=700&q=80" alt="Historic Germany">
+
+            </div>
+
+            <h3>Brandenburg Gate</h3>
+
+            <p>
+                One of Berlin's most recognizable landmarks
+                and an important symbol of German history.
+            </p>
+
+            <div class="details-box">
+                The Brandenburg Gate is one of Berlin's best-known
+                landmarks. It has played an important role in the history
+                and identity of the city.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- LINDENBERG / Eltz Castle -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=700&q=80" alt="Eltz Castle">
+
+                <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=700&q=80" alt="German Castle">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Castle">
+
+                <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=700&q=80" alt="Castle Germany">
+
+                <img src="https://images.unsplash.com/photo-1478827536114-da961b7e4e34?auto=format&fit=crop&w=700&q=80" alt="Historic Castle">
+
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=700&q=80" alt="Germany">
+
+            </div>
+
+            <h3>Eltz Castle</h3>
+
+            <p>
+                A beautiful medieval castle located in a
+                forested valley in western Germany.
+            </p>
+
+            <div class="details-box">
+                Eltz Castle is known for its medieval architecture and
+                picturesque location. Germany Travel lists it among the
+                country's notable castles and palaces.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- MUSEUM ISLAND -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=700&q=80" alt="Berlin Museum">
+
+                <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=700&q=80" alt="Museum">
+
+                <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=700&q=80" alt="Berlin Museum Island">
+
+                <img src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?auto=format&fit=crop&w=700&q=80" alt="Museum">
+
+                <img src="https://images.unsplash.com/photo-1566404791232-af9fe5f1a3f1?auto=format&fit=crop&w=700&q=80" alt="Berlin">
+
+                <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=700&q=80" alt="Historic Building">
+
+            </div>
+
+            <h3>Museum Island</h3>
+
+            <p>
+                A famous cultural area in Berlin containing
+                several important museums.
+            </p>
+
+            <div class="details-box">
+                Museum Island is located in the heart of Berlin and is
+                an important cultural destination with several museums
+                and historic buildings.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESTAURANTS -->
+
+<section class="section">
+
+    <h2>Famous Restaurants</h2>
+
+    <p class="section-description">
+        Experience German cuisine in traditional restaurants,
+        modern dining spaces and famous food destinations.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- GERMAN TRADITIONAL RESTAURANT -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="German Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="German Food">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Restaurant Food">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Dining">
+
+            </div>
+
+            <h3>Traditional German Restaurant</h3>
+
+            <p>
+                Enjoy classic German dishes in a traditional
+                restaurant atmosphere.
+            </p>
+
+            <div class="details-box">
+                Traditional German restaurants often serve hearty dishes
+                such as sausages, schnitzel, potatoes and regional
+                specialties.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- BERLIN DINING -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Restaurant Berlin">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Restaurant Food">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Dining">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="German Food">
+
+            </div>
+
+            <h3>Berlin Dining</h3>
+
+            <p>
+                Berlin offers a diverse food scene combining
+                German traditions with international cuisine.
+            </p>
+
+            <div class="details-box">
+                Berlin has a large and diverse culinary scene. Visitors
+                can find traditional German dishes as well as many
+                international and modern restaurants.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- BAVARIAN RESTAURANT -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Bavarian Food">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="German Food">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Dining">
+
+            </div>
+
+            <h3>Bavarian Restaurant</h3>
+
+            <p>
+                Taste traditional Bavarian specialties
+                in a warm and welcoming setting.
+            </p>
+
+            <div class="details-box">
+                Bavarian cuisine is known for hearty meals and regional
+                specialties. Munich and Bavaria are especially famous
+                for their traditional food culture.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOD -->
+
+<section class="section" style="background-color:#eef7f7;">
+
+    <h2>Famous German Food</h2>
+
+    <p class="section-description">
+        Try some of Germany's most famous traditional foods.
+    </p>
+
+
+    <div class="country-grid">
+
+
+        <!-- BRATWURST -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=700&q=80" alt="Bratwurst">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Sausage">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="German Food">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Restaurant Food">
+
+            </div>
+
+            <h3>Bratwurst</h3>
+
+            <p>
+                A popular German sausage that comes in many
+                regional varieties.
+            </p>
+
+            <div class="details-box">
+                Bratwurst is one of the best-known German foods.
+                Different regions have their own recipes and styles
+                of preparing this traditional sausage.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- SCHNITZEL -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Schnitzel">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Schnitzel Food">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="German Food">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Restaurant">
+
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=700&q=80" alt="German Dish">
+
+            </div>
+
+            <h3>Schnitzel</h3>
+
+            <p>
+                A breaded and fried meat dish commonly served
+                with potatoes or salad.
+            </p>
+
+            <div class="details-box">
+                Schnitzel is widely enjoyed in German-speaking regions.
+                It is commonly served with potatoes, salad or other
+                traditional side dishes.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- PRETZEL -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=700&q=80" alt="Pretzel">
+
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="Pretzel Bread">
+
+                <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=700&q=80" alt="Bread">
+
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Bakery">
+
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="German Pretzel">
+
+                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=700&q=80" alt="Pretzel">
+
+            </div>
+
+            <h3>Pretzel</h3>
+
+            <p>
+                A traditional baked snack with a distinctive
+                twisted shape and golden-brown crust.
+            </p>
+
+            <div class="details-box">
+                Pretzels are especially popular in southern Germany
+                and are commonly enjoyed as a snack or with traditional
+                meals.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- SAUERKRAUT -->
+
+        <div class="place-card">
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="German Food">
+
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="German Dish">
+
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant Food">
+
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Food">
+
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=700&q=80" alt="German Meal">
+
+            </div>
+
+            <h3>Sauerkraut</h3>
+
+            <p>
+                Fermented cabbage traditionally served as a side dish
+                with many German meals.
+            </p>
+
+            <div class="details-box">
+                Sauerkraut is a traditional German food made from
+                fermented cabbage. It is often served alongside meat,
+                sausages and potatoes.
+            </div>
+
+            <button class="details-button">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Explore the World</h3>
+
+    <p>
+        Discover beautiful countries, amazing destinations,
+        delicious food and unforgettable experiences.
+    </p>
+
+    <p>
+        © 2026 Explore the World. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    const buttons = document.querySelectorAll(".details-button");
+
+    buttons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const details = button.previousElementSibling;
+
+            if (details.style.display === "block") {
+
+                details.style.display = "none";
+                button.textContent = "View Details";
+
+            } else {
+
+                details.style.display = "block";
+                button.textContent = "Hide Details";
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

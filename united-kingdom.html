@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>United Kingdom - Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .country-hero {
+            min-height: 65vh;
+
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+
+        .country-hero h1 {
+            font-size: 70px;
+            margin-bottom: 15px;
+
+            text-shadow:
+                2px 3px 10px rgba(0,0,0,.6);
+        }
+
+
+        .country-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.7;
+            margin: auto;
+        }
+
+
+        .back-link {
+            display: inline-block;
+
+            margin: 25px 60px;
+
+            color: #159895;
+            text-decoration: none;
+
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+
+        .back-link:hover {
+            color: #0d7775;
+        }
+
+
+        .country-intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        .country-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        .facts {
+            display: flex;
+            justify-content: center;
+
+            gap: 25px;
+            flex-wrap: wrap;
+
+            margin-top: 40px;
+        }
+
+
+        .fact-box {
+            background: white;
+
+            width: 210px;
+
+            padding: 25px 15px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,.08);
+        }
+
+
+        .fact-box h3 {
+            color: #159895;
+            margin-bottom: 10px;
+        }
+
+
+        .fact-box p {
+            color: #666;
+        }
+
+
+        .country-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .place-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.10);
+
+            transition: .4s;
+
+            text-align: left;
+        }
+
+
+        .place-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 30px rgba(0,0,0,.18);
+        }
+
+
+        .place-card h3 {
+            font-size: 25px;
+
+            margin:
+                20px 25px 10px;
+
+            color: #222;
+        }
+
+
+        .place-card > p {
+            margin:
+                0 25px 20px;
+
+            color: #666;
+
+            line-height: 1.6;
+        }
+
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 5px;
+
+            padding: 5px;
+        }
+
+
+        .gallery img {
+            width: 100%;
+
+            height: 130px;
+
+            object-fit: cover;
+
+            border-radius: 5px;
+        }
+
+
+        .details-box {
+            display: none;
+
+            margin:
+                0 25px 20px;
+
+            padding: 18px;
+
+            background: #eef7f7;
+
+            border-radius: 10px;
+
+            color: #555;
+
+            line-height: 1.7;
+        }
+
+
+        .details-button {
+            display: inline-block;
+
+            margin:
+                0 25px 25px;
+
+            padding:
+                10px 22px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #159895;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        .details-button:hover {
+            background: #0d7775;
+        }
+
+
+        @media (max-width: 800px) {
+
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .country-hero h1 {
+                font-size: 50px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .country-hero h1 {
+                font-size: 38px;
+            }
+
+
+            .gallery img {
+                height: 100px;
+            }
+
+
+            .back-link {
+                margin: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        Explore the World
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#countries">
+            Countries
+        </a>
+
+        <a href="index.html#destinations">
+            Destinations
+        </a>
+
+        <a href="index.html#hotels">
+            Hotels
+        </a>
+
+        <a href="index.html#food">
+            Food
+        </a>
+
+        <a href="index.html#activities">
+            Activities
+        </a>
+
+        <a href="index.html#about">
+            About Us
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- BACK -->
+
+<a
+    href="index.html#countries"
+    class="back-link"
+>
+    ← Back to Countries
+</a>
+
+
+
+<!-- HERO -->
+
+<section class="country-hero">
+
+    <div>
+
+        <h1>
+            United Kingdom
+        </h1>
+
+        <p>
+            Discover historic cities, royal landmarks,
+            beautiful countryside, famous food and
+            unforgettable places across the United Kingdom.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+    <div class="country-intro">
+
+        <h2>
+            About United Kingdom
+        </h2>
+
+
+        <p>
+            The United Kingdom is a country in northwestern
+            Europe known for its rich history, famous cities,
+            royal heritage, historic castles, museums and
+            beautiful countryside. London is one of the world's
+            most visited cities and is famous for landmarks,
+            culture, shopping and entertainment.
+        </p>
+
+
+
+        <div class="facts">
+
+
+            <div class="fact-box">
+
+                <h3>
+                    Capital
+                </h3>
+
+                <p>
+                    London
+                </p>
+
+            </div>
+
+
+
+            <div class="fact-box">
+
+                <h3>
+                    Language
+                </h3>
+
+                <p>
+                    English
+                </p>
+
+            </div>
+
+
+
+            <div class="fact-box">
+
+                <h3>
+                    Continent
+                </h3>
+
+                <p>
+                    Europe
+                </p>
+
+            </div>
+
+
+
+            <div class="fact-box">
+
+                <h3>
+                    Currency
+                </h3>
+
+                <p>
+                    Pound Sterling
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FAMOUS PLACES -->
+
+<section class="section">
+
+    <h2>
+        Famous Places in United Kingdom
+    </h2>
+
+
+    <p class="section-description">
+        Explore famous cities, landmarks and beautiful
+        destinations across the United Kingdom.
+    </p>
+
+
+
+    <div class="country-grid">
+
+
+
+        <!-- LONDON -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517394834181-95ed159986c7?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=700&q=80"
+                    alt="London Street"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=700&q=80"
+                    alt="London City"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+            </div>
+
+
+
+            <h3>
+                London
+            </h3>
+
+
+            <p>
+                The capital city of the United Kingdom,
+                famous for Big Ben, Buckingham Palace,
+                the London Eye and many museums.
+            </p>
+
+
+            <div class="details-box">
+
+                London is one of the world's most famous cities.
+                Visitors can explore historic landmarks, museums,
+                parks, shopping areas, theaters and the River Thames.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- EDINBURGH -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=700&q=80"
+                    alt="Edinburgh"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=700&q=80"
+                    alt="Edinburgh"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=700&q=80"
+                    alt="Scotland"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?auto=format&fit=crop&w=700&q=80"
+                    alt="Edinburgh"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80"
+                    alt="United Kingdom"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80"
+                    alt="Scotland Landscape"
+                >
+
+            </div>
+
+
+            <h3>
+                Edinburgh
+            </h3>
+
+
+            <p>
+                The capital of Scotland, known for its
+                historic castle, old town and beautiful hills.
+            </p>
+
+
+            <div class="details-box">
+
+                Edinburgh is famous for its historic architecture,
+                Edinburgh Castle, Royal Mile and cultural festivals.
+                The city combines medieval history with a lively
+                modern atmosphere.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- BATH -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=700&q=80"
+                    alt="Bath"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
+                    alt="United Kingdom"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=700&q=80"
+                    alt="British City"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=700&q=80"
+                    alt="England"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=700&q=80"
+                    alt="England"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=700&q=80"
+                    alt="British Architecture"
+                >
+
+            </div>
+
+
+            <h3>
+                Bath
+            </h3>
+
+
+            <p>
+                A historic English city famous for its Roman Baths,
+                Georgian architecture and beautiful streets.
+            </p>
+
+
+            <div class="details-box">
+
+                Bath is famous for its Roman Baths and historic
+                Georgian architecture. The city is also known for
+                its elegant streets and cultural heritage.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- LAKE DISTRICT -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80"
+                    alt="Lake District"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80"
+                    alt="United Kingdom Landscape"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80"
+                    alt="British Landscape"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80"
+                    alt="Lake District"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=700&q=80"
+                    alt="Mountain Landscape"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80"
+                    alt="British Mountains"
+                >
+
+            </div>
+
+
+            <h3>
+                Lake District
+            </h3>
+
+
+            <p>
+                A beautiful region of mountains, lakes,
+                valleys and peaceful countryside in England.
+            </p>
+
+
+            <div class="details-box">
+
+                The Lake District is famous for its lakes,
+                mountains and scenic countryside. It is a
+                popular destination for walking, hiking and
+                enjoying nature.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- HISTORICAL PLACES -->
+
+<section
+    class="section"
+    style="background-color:#eef7f7;"
+>
+
+
+    <h2>
+        Historical Places
+    </h2>
+
+
+    <p class="section-description">
+        Discover the United Kingdom's famous castles,
+        palaces and historic landmarks.
+    </p>
+
+
+
+    <div class="country-grid">
+
+
+
+        <!-- BIG BEN -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=700&q=80"
+                    alt="Big Ben"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517394834181-95ed159986c7?auto=format&fit=crop&w=700&q=80"
+                    alt="London Landmark"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+            </div>
+
+
+            <h3>
+                Big Ben
+            </h3>
+
+
+            <p>
+                One of London's most famous landmarks,
+                located beside the Houses of Parliament.
+            </p>
+
+
+            <div class="details-box">
+
+                Big Ben is one of London's most recognizable
+                landmarks. The famous clock tower stands beside
+                the Houses of Parliament at Westminster.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- TOWER OF LONDON -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=700&q=80"
+                    alt="Tower of London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517394834181-95ed159986c7?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=700&q=80"
+                    alt="London Street"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+            </div>
+
+
+            <h3>
+                Tower of London
+            </h3>
+
+
+            <p>
+                A historic fortress on the River Thames
+                with centuries of royal and British history.
+            </p>
+
+
+            <div class="details-box">
+
+                The Tower of London is a historic fortress
+                on the River Thames. It has served many
+                different purposes throughout British history.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- BUCKINGHAM PALACE -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
+                    alt="Buckingham Palace"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517394834181-95ed159986c7?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=700&q=80"
+                    alt="London"
+                >
+
+            </div>
+
+
+            <h3>
+                Buckingham Palace
+            </h3>
+
+
+            <p>
+                The famous London residence associated
+                with the British monarchy.
+            </p>
+
+
+            <div class="details-box">
+
+                Buckingham Palace is one of London's most famous
+                landmarks and is closely associated with the
+                British monarchy and royal ceremonies.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- RESTAURANTS -->
+
+<section class="section">
+
+
+    <h2>
+        Famous Restaurants
+    </h2>
+
+
+    <p class="section-description">
+        Enjoy traditional British dishes, afternoon tea
+        and modern dining experiences.
+    </p>
+
+
+
+    <div class="country-grid">
+
+
+
+        <!-- BRITISH PUB -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=700&q=80"
+                    alt="British Pub"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=700&q=80"
+                    alt="Pub"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                    alt="Dining"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                    alt="British Food"
+                >
+
+            </div>
+
+
+            <h3>
+                Traditional British Pub
+            </h3>
+
+
+            <p>
+                A classic British dining experience with
+                traditional food and a relaxed atmosphere.
+            </p>
+
+
+            <div class="details-box">
+
+                Traditional British pubs are an important part
+                of the country's food and social culture.
+                Visitors can enjoy dishes such as fish and chips,
+                pies and Sunday roast.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- LONDON RESTAURANT -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                    alt="London Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant Dining"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                    alt="British Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+            </div>
+
+
+            <h3>
+                London Restaurant
+            </h3>
+
+
+            <p>
+                Experience London's diverse restaurant
+                scene and international cuisine.
+            </p>
+
+
+            <div class="details-box">
+
+                London has one of the world's most diverse food
+                scenes. Visitors can find British dishes as well
+                as cuisines from many countries.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- AFTERNOON TEA -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80"
+                    alt="Afternoon Tea"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?auto=format&fit=crop&w=700&q=80"
+                    alt="Tea"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80"
+                    alt="British Tea"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                    alt="Tea Restaurant"
+                >
+
+            </div>
+
+
+            <h3>
+                Afternoon Tea
+            </h3>
+
+
+            <p>
+                Enjoy a traditional British afternoon tea
+                with tea, sandwiches and sweet treats.
+            </p>
+
+
+            <div class="details-box">
+
+                Afternoon tea is a popular British tradition
+                involving tea served with sandwiches, cakes,
+                scones and other sweet treats.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOD -->
+
+<section
+    class="section"
+    style="background-color:#eef7f7;"
+>
+
+
+    <h2>
+        Famous British Food
+    </h2>
+
+
+    <p class="section-description">
+        Try some of the most famous traditional foods
+        associated with the United Kingdom.
+    </p>
+
+
+
+    <div class="country-grid">
+
+
+
+        <!-- FISH AND CHIPS -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?auto=format&fit=crop&w=700&q=80"
+                    alt="Fish and Chips"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="British Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                    alt="British Dining"
+                >
+
+            </div>
+
+
+            <h3>
+                Fish and Chips
+            </h3>
+
+
+            <p>
+                A famous British dish made with fried fish
+                served with chips.
+            </p>
+
+
+            <div class="details-box">
+
+                Fish and chips is one of the best-known dishes
+                associated with British cuisine. It is traditionally
+                served as fried fish with chips.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- SUNDAY ROAST -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="Sunday Roast"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                    alt="Roast Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80"
+                    alt="British Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                    alt="Dining"
+                >
+
+            </div>
+
+
+            <h3>
+                Sunday Roast
+            </h3>
+
+
+            <p>
+                A traditional British meal usually served
+                with roasted meat, vegetables and gravy.
+            </p>
+
+
+            <div class="details-box">
+
+                Sunday roast is a traditional British meal commonly
+                enjoyed on Sundays. It can include roasted meat,
+                potatoes, vegetables and gravy.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- SHEPHERD'S PIE -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="Shepherd's Pie"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                    alt="British Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                    alt="Dining"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                    alt="Restaurant"
+                >
+
+            </div>
+
+
+            <h3>
+                Shepherd's Pie
+            </h3>
+
+
+            <p>
+                A comforting traditional dish made with
+                seasoned meat and mashed potatoes.
+            </p>
+
+
+            <div class="details-box">
+
+                Shepherd's pie is a traditional British comfort food
+                made with minced meat and topped with mashed potatoes.
+                It is commonly baked until the top becomes golden.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+
+        <!-- SCONE -->
+
+        <div class="place-card">
+
+
+            <div class="gallery">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80"
+                    alt="Scones"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80"
+                    alt="British Scones"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?auto=format&fit=crop&w=700&q=80"
+                    alt="Tea"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                    alt="Food"
+                >
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80"
+                    alt="British Food"
+                >
+
+            </div>
+
+
+            <h3>
+                Scones
+            </h3>
+
+
+            <p>
+                A popular British baked treat often served
+                with afternoon tea, cream and jam.
+            </p>
+
+
+            <div class="details-box">
+
+                Scones are a popular part of British afternoon tea.
+                They are commonly served with cream and jam
+                alongside tea.
+
+            </div>
+
+
+            <button class="details-button">
+                View Details
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        Explore the World
+    </h3>
+
+
+    <p>
+        Discover beautiful countries, amazing destinations,
+        delicious food and unforgettable experiences.
+    </p>
+
+
+    <p>
+        © 2026 Explore the World. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    const buttons =
+        document.querySelectorAll(".details-button");
+
+
+    buttons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const details =
+                button.previousElementSibling;
+
+
+            if (details.style.display === "block") {
+
+                details.style.display = "none";
+
+                button.textContent =
+                    "View Details";
+
+            }
+
+            else {
+
+                details.style.display = "block";
+
+                button.textContent =
+                    "Hide Details";
+
+            }
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+</html>

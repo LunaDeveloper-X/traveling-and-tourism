@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Turkey | Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           TURKEY PAGE
+        ========================= */
+
+        .country-hero {
+            min-height: 70vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .country-hero-content h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,.5);
+        }
+
+        .country-hero-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .country-intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .country-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+        }
+
+        .place-card > img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .place-content {
+            padding: 25px;
+        }
+
+        .place-content h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+
+        .place-content p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .info-list {
+            margin: 15px 0 20px;
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .info-list li {
+            margin-bottom: 5px;
+        }
+
+        .details-box {
+            display: none;
+            background: #f5f7f8;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        .details-box.show {
+            display: block;
+        }
+
+        .details-box h4 {
+            color: #159895;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .details-box p {
+            margin: 0;
+        }
+
+        .section-alt {
+            background: #eef7f7;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 900px) {
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero-content h1 {
+                font-size: 55px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .country-hero-content h1 {
+                font-size: 42px;
+            }
+
+            .country-hero-content p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+        <div class="logo">Explore the World</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#countries">Countries</a>
+            <a href="index.html#destinations">Destinations</a>
+            <a href="index.html#hotels">Hotels</a>
+            <a href="index.html#food">Food</a>
+            <a href="index.html#activities">Activities</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         TURKEY HERO
+    ========================= -->
+
+    <section class="country-hero">
+
+        <div class="country-hero-content">
+
+            <h1>Turkey</h1>
+
+            <p>
+                Discover Turkey, a fascinating country where Europe and Asia
+                meet. Explore beautiful cities, ancient history, amazing
+                landscapes, traditional food and unforgettable experiences.
+            </p>
+
+            <a href="index.html#countries" class="hero-button">
+                ← Back to Countries
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT TURKEY
+    ========================= -->
+
+    <section class="section">
+
+        <div class="country-intro">
+
+            <h2>About Turkey</h2>
+
+            <p>
+                Turkey is one of the world's most fascinating travel
+                destinations. It is famous for its rich history, beautiful
+                architecture, diverse landscapes and delicious cuisine.
+                Visitors can explore modern cities, ancient ruins, beaches,
+                mountains and traditional markets.
+            </p>
+
+            <ul class="info-list">
+                <li><strong>Capital:</strong> Ankara</li>
+                <li><strong>Largest City:</strong> Istanbul</li>
+                <li><strong>Region:</strong> Europe and Asia</li>
+                <li><strong>Famous For:</strong> History, culture, food and landscapes</li>
+                <li><strong>Popular Destination:</strong> Istanbul and Cappadocia</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAMOUS PLACES
+    ========================= -->
+
+    <section class="section section-alt">
+
+        <h2>Famous Places in Turkey</h2>
+
+        <p class="section-description">
+            Explore some of Turkey's most beautiful and popular destinations.
+        </p>
+
+
+        <div class="places-grid">
+
+
+            <!-- =================
+                 ISTANBUL
+            ================= -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1000&q=85"
+                    alt="Istanbul"
+                >
+
+                <div class="place-content">
+
+                    <h3>Istanbul</h3>
+
+                    <p>
+                        Istanbul is Turkey's largest city and a unique
+                        destination connecting Europe and Asia. The city is
+                        famous for historic buildings, the Bosphorus,
+                        markets and beautiful mosques.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80" alt="Istanbul">
+
+                        <img src="https://images.unsplash.com/photo-1541432901042-2d8a0d8e2d0a?auto=format&fit=crop&w=600&q=80" alt="Istanbul Mosque">
+
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Istanbul Architecture">
+
+                        <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=600&q=80" alt="Istanbul City">
+
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80" alt="Istanbul Historic Area">
+
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Istanbul View">
+
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" alt="Istanbul Travel">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('istanbulDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="istanbulDetails">
+
+                        <h4>About Istanbul</h4>
+
+                        <p>
+                            Istanbul has played an important role in history
+                            for centuries. Important attractions include
+                            Hagia Sophia, the Blue Mosque, Topkapi Palace,
+                            Grand Bazaar and the Bosphorus.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================
+                 CAPPADOCIA
+            ================= -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=85"
+                    alt="Cappadocia"
+                >
+
+                <div class="place-content">
+
+                    <h3>Cappadocia</h3>
+
+                    <p>
+                        Cappadocia is famous for its unusual rock formations,
+                        cave homes, underground cities and unforgettable
+                        hot-air balloon rides.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=600&q=80" alt="Cappadocia">
+
+                        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80" alt="Turkey">
+
+                        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=600&q=80" alt="Cappadocia Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Turkey Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1470214304380-aadaedcfff1b?auto=format&fit=crop&w=600&q=80" alt="Cappadocia Valley">
+
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=600&q=80" alt="Mountain Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Landscape">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('cappadociaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="cappadociaDetails">
+
+                        <h4>About Cappadocia</h4>
+
+                        <p>
+                            Cappadocia's landscape was created by volcanic
+                            activity and erosion. It is especially famous
+                            for its fairy chimneys and hot-air balloon tours.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================
+                 PAMUKKALE
+            ================= -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85"
+                    alt="Pamukkale"
+                >
+
+                <div class="place-content">
+
+                    <h3>Pamukkale</h3>
+
+                    <p>
+                        Pamukkale is famous for its brilliant white mineral
+                        terraces and natural thermal pools.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Pamukkale">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Turkey Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80" alt="Nature">
+
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Mountain">
+
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Nature">
+
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Travel">
+
+                        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80" alt="Landscape">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('pamukkaleDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="pamukkaleDetails">
+
+                        <h4>About Pamukkale</h4>
+
+                        <p>
+                            Pamukkale means "cotton castle". Its white
+                            terraces are formed by mineral-rich thermal
+                            waters flowing down the hillside.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================
+                 ANTALYA
+            ================= -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1000&q=85"
+                    alt="Antalya"
+                >
+
+                <div class="place-content">
+
+                    <h3>Antalya</h3>
+
+                    <p>
+                        Antalya is a beautiful Mediterranean destination
+                        known for beaches, resorts, waterfalls and historic
+                        attractions.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80" alt="Antalya">
+
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Beach">
+
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Travel">
+
+                        <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=600&q=80" alt="Nature">
+
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=80" alt="Sea">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Mountain">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('antalyaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="antalyaDetails">
+
+                        <h4>About Antalya</h4>
+
+                        <p>
+                            Antalya is located on Turkey's Mediterranean
+                            coast. It is popular for its beaches, old town,
+                            waterfalls and nearby ancient ruins.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTORICAL PLACES
+    ========================= -->
+
+    <section class="section">
+
+        <h2>Historical Places in Turkey</h2>
+
+        <p class="section-description">
+            Turkey has a fascinating history and is home to many ancient
+            landmarks and archaeological sites.
+        </p>
+
+
+        <div class="places-grid">
+
+
+            <!-- Hagia Sophia -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541432901042-2d8a0d8e2d0a?auto=format&fit=crop&w=1000&q=85"
+                    alt="Hagia Sophia"
+                >
+
+                <div class="place-content">
+
+                    <h3>Hagia Sophia</h3>
+
+                    <p>
+                        One of Istanbul's most famous historical landmarks,
+                        known for its enormous dome and remarkable history.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1541432901042-2d8a0d8e2d0a?auto=format&fit=crop&w=600&q=80" alt="Hagia Sophia">
+
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Historic Mosque">
+
+                        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80" alt="Istanbul">
+
+                        <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=600&q=80" alt="Historic Building">
+
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80" alt="Historic Site">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Turkey">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('hagiaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="hagiaDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Hagia Sophia is one of Istanbul's most important
+                            architectural landmarks and has served different
+                            religious and cultural roles throughout history.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Blue Mosque -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=85"
+                    alt="Blue Mosque"
+                >
+
+                <div class="place-content">
+
+                    <h3>Blue Mosque</h3>
+
+                    <p>
+                        The Blue Mosque is famous for its beautiful domes,
+                        minarets and detailed interior decoration.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Blue Mosque">
+
+                        <img src="https://images.unsplash.com/photo-1541432901042-2d8a0d8e2d0a?auto=format&fit=crop&w=600&q=80" alt="Mosque">
+
+                        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80" alt="Istanbul">
+
+                        <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=600&q=80" alt="Architecture">
+
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80" alt="History">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Turkey">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('blueMosqueDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="blueMosqueDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            The Blue Mosque is one of Istanbul's most
+                            recognizable landmarks and is known for its
+                            impressive Ottoman architecture.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Ephesus -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1000&q=85"
+                    alt="Ancient Ruins"
+                >
+
+                <div class="place-content">
+
+                    <h3>Ephesus</h3>
+
+                    <p>
+                        Ephesus is an ancient city famous for its impressive
+                        ruins and classical architecture.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80" alt="Ancient Ruins">
+
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Ancient Site">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Historic Landscape">
+
+                        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80" alt="Turkey">
+
+                        <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=600&q=80" alt="Architecture">
+
+                        <img src="https://images.unsplash.com/photo-1470214304380-aadaedcfff1b?auto=format&fit=crop&w=600&q=80" alt="Ancient Landscape">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('ephesusDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="ephesusDetails">
+
+                        <h4>Historical Information</h4>
+
+                        <p>
+                            Ephesus was an important ancient city and is
+                            today one of Turkey's most significant
+                            archaeological destinations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAMOUS RESTAURANTS
+    ========================= -->
+
+    <section class="section section-alt">
+
+        <h2>Famous Restaurants in Turkey</h2>
+
+        <p class="section-description">
+            Discover restaurants and dining experiences associated with
+            Turkish cuisine.
+        </p>
+
+
+        <div class="places-grid">
+
+
+            <!-- Mikla -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85"
+                    alt="Turkish Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Mikla</h3>
+
+                    <p>
+                        A well-known Istanbul restaurant associated with
+                        modern Turkish cuisine and city views.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Dining">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant Food">
+
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Turkish Meal">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('miklaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="miklaDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Mikla is known for combining Turkish ingredients
+                            and culinary traditions with modern cooking
+                            techniques.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Karakoy Lokantasi -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+                    alt="Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Karaköy Lokantası</h3>
+
+                    <p>
+                        A popular Istanbul dining destination known for
+                        traditional Turkish dishes and a stylish atmosphere.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Dining">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Turkish Food">
+
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('karakoyDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="karakoyDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Karaköy Lokantası is associated with traditional
+                            Turkish flavors and a modern Istanbul dining
+                            experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Çiya Sofrası -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=85"
+                    alt="Turkish Food Restaurant"
+                >
+
+                <div class="place-content">
+
+                    <h3>Çiya Sofrası</h3>
+
+                    <p>
+                        A famous Istanbul restaurant associated with regional
+                        Turkish cooking and traditional recipes.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Turkish Meal">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Dining">
+
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('ciyaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="ciyaDetails">
+
+                        <h4>Restaurant Information</h4>
+
+                        <p>
+                            Çiya Sofrası is especially associated with
+                            regional Turkish dishes and lesser-known
+                            traditional recipes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAMOUS FOOD
+    ========================= -->
+
+    <section class="section">
+
+        <h2>Famous Turkish Food</h2>
+
+        <p class="section-description">
+            Turkish cuisine is famous for its variety, rich flavors and
+            traditional cooking methods.
+        </p>
+
+
+        <div class="places-grid">
+
+
+            <!-- Kebab -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=1000&q=85"
+                    alt="Kebab"
+                >
+
+                <div class="place-content">
+
+                    <h3>Kebab</h3>
+
+                    <p>
+                        Kebab is one of the most internationally recognized
+                        Turkish foods, prepared in many regional styles.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=600&q=80" alt="Kebab">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Grilled Food">
+
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Turkish Food">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Dining">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('kebabDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="kebabDetails">
+
+                        <h4>About Kebab</h4>
+
+                        <p>
+                            Turkish kebab comes in many varieties, including
+                            grilled meat dishes prepared with different
+                            spices, vegetables and cooking techniques.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Baklava -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=1000&q=85"
+                    alt="Baklava"
+                >
+
+                <div class="place-content">
+
+                    <h3>Baklava</h3>
+
+                    <p>
+                        Baklava is a famous sweet pastry made with thin layers,
+                        nuts and sweet syrup.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=600&q=80" alt="Baklava">
+
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+
+                        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" alt="Sweet Food">
+
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+
+                        <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=600&q=80" alt="Sweet">
+
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('baklavaDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="baklavaDetails">
+
+                        <h4>About Baklava</h4>
+
+                        <p>
+                            Baklava is prepared using thin pastry layers,
+                            chopped nuts and sweet syrup. It is one of the
+                            best-known desserts of Turkish cuisine.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Turkish Delight -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85"
+                    alt="Turkish Dessert"
+                >
+
+                <div class="place-content">
+
+                    <h3>Turkish Delight</h3>
+
+                    <p>
+                        Turkish delight is a traditional sweet available in
+                        many flavors and varieties.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Turkish Dessert">
+
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80" alt="Sweet">
+
+                        <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+
+                        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" alt="Sweet Food">
+
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Pastry">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('delightDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="delightDetails">
+
+                        <h4>About Turkish Delight</h4>
+
+                        <p>
+                            Turkish delight is a traditional confection made
+                            in many flavors, sometimes containing nuts or
+                            dried fruits.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pide -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85"
+                    alt="Pide"
+                >
+
+                <div class="place-content">
+
+                    <h3>Turkish Pide</h3>
+
+                    <p>
+                        Pide is a traditional Turkish flatbread often topped
+                        with meat, cheese or vegetables.
+                    </p>
+
+                    <div class="gallery">
+
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Pide">
+
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Food">
+
+                        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=600&q=80" alt="Kebab">
+
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Meal">
+
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant Food">
+
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Turkish Dining">
+
+                    </div>
+
+                    <button class="card-button"
+                        onclick="toggleDetails('pideDetails')">
+                        View Details
+                    </button>
+
+                    <div class="details-box" id="pideDetails">
+
+                        <h4>About Turkish Pide</h4>
+
+                        <p>
+                            Pide is a popular Turkish bread dish that can be
+                            prepared with different toppings such as cheese,
+                            meat, eggs and vegetables.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT / END
+    ========================= -->
+
+    <section class="contact">
+
+        <h2>Explore Turkey</h2>
+
+        <p>
+            Discover the history, culture, food and beautiful destinations
+            of Turkey.
+        </p>
+
+        <a href="index.html#countries" class="hero-button">
+            ← Back to Countries
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>Explore the World</h3>
+
+        <p>
+            Discover beautiful places around the world.
+        </p>
+
+        <p>
+            © 2026 Explore the World. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        function toggleDetails(id) {
+
+            const box = document.getElementById(id);
+
+            if (box.classList.contains("show")) {
+
+                box.classList.remove("show");
+
+            } else {
+
+                box.classList.add("show");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

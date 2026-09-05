@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>France - Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .country-hero {
+            min-height: 65vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .country-hero p {
+            font-size: 21px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 25px 60px 0;
+            color: #159895;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .country-info {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            color: #666;
+            font-size: 17px;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+            text-align: left;
+        }
+
+        .place-card > img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .place-content {
+            padding: 25px;
+        }
+
+        .place-content h3 {
+            font-size: 27px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+
+        .place-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 18px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .details-box {
+            display: none;
+            background: #eef7f7;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .details-box.show {
+            display: block;
+        }
+
+        .detail-button {
+            border: none;
+            padding: 11px 22px;
+            border-radius: 25px;
+            background: #159895;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .detail-button:hover {
+            background: #0d7775;
+        }
+
+        @media (max-width: 800px) {
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero h1 {
+                font-size: 45px;
+            }
+
+            .back-link {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .country-hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Explore the World</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#countries">Countries</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#hotels">Hotels</a>
+        <a href="index.html#food">Food</a>
+        <a href="index.html#activities">Activities</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<a class="back-link" href="index.html#countries">
+    ← Back to Countries
+</a>
+
+
+<!-- HERO -->
+
+<section class="country-hero">
+
+    <div>
+        <h1>France</h1>
+
+        <p>
+            Discover the beauty, history, food and culture of France
+        </p>
+    </div>
+
+</section>
+
+
+<!-- ABOUT FRANCE -->
+
+<section class="section">
+
+    <h2>About France</h2>
+
+    <p class="country-info">
+        France is a beautiful country in Western Europe known for its
+        art, fashion, architecture, history, cuisine and romantic cities.
+        Paris is the capital and is famous for landmarks such as the
+        Eiffel Tower, Louvre Museum and Notre-Dame Cathedral.
+        France also has beautiful countryside, castles, beaches and
+        historic towns.
+    </p>
+
+</section>
+
+
+<!-- FAMOUS PLACES -->
+
+<section class="section hotel-section">
+
+    <h2>Famous Places in France</h2>
+
+    <p class="section-description">
+        Explore some of the most beautiful and famous destinations in France.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- PARIS -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
+                alt="Paris France"
+            >
+
+            <div class="place-content">
+
+                <h3>Paris</h3>
+
+                <p>
+                    Paris is the capital of France and one of the world's
+                    most famous cities. It is known for art, fashion,
+                    architecture, museums and beautiful streets.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1522098543979-ffc7f79d0f0d?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=500&q=80" alt="Paris">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Paris is famous for the Eiffel Tower, Louvre Museum,
+                    Notre-Dame Cathedral, Arc de Triomphe, Montmartre
+                    and the Seine River. It is also an important center
+                    for art, fashion and culture.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- NICE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                alt="Nice France"
+            >
+
+            <div class="place-content">
+
+                <h3>Nice</h3>
+
+                <p>
+                    Nice is a beautiful city on the French Riviera known
+                    for its Mediterranean coastline, beaches and old town.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Nice">
+                    <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=500&q=80" alt="Nice">
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=500&q=80" alt="France">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Nice is located on the Mediterranean coast.
+                    Visitors can enjoy beaches, seaside walks,
+                    colorful streets and the atmosphere of the
+                    French Riviera.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- LYON -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+                alt="Lyon France"
+            >
+
+            <div class="place-content">
+
+                <h3>Lyon</h3>
+
+                <p>
+                    Lyon is a historic French city famous for its
+                    architecture, culture and food traditions.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=500&q=80" alt="Lyon">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1522098543979-ffc7f79d0f0d?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Paris">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Lyon has a historic old town and is widely known
+                    for its culinary traditions. Its architecture and
+                    riverside areas make it an interesting destination.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- STRASBOURG -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+                alt="Strasbourg France"
+            >
+
+            <div class="place-content">
+
+                <h3>Strasbourg</h3>
+
+                <p>
+                    Strasbourg is known for its historic center,
+                    canals, architecture and European institutions.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=500&q=80" alt="Strasbourg">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1522098543979-ffc7f79d0f0d?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Paris">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Strasbourg has a beautiful historic center with
+                    canals, traditional buildings and a distinctive
+                    blend of French and Central European influences.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORICAL PLACES -->
+
+<section class="section">
+
+    <h2>Historical Places in France</h2>
+
+    <p class="section-description">
+        Discover some of France's most important historical landmarks.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- EIFFEL TOWER -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
+                alt="Eiffel Tower"
+            >
+
+            <div class="place-content">
+
+                <h3>Eiffel Tower</h3>
+
+                <p>
+                    The Eiffel Tower is one of the world's most famous
+                    landmarks and a symbol of Paris.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Eiffel Tower">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1522098543979-ffc7f79d0f0d?auto=format&fit=crop&w=500&q=80" alt="Paris">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80" alt="France">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    The Eiffel Tower is one of Paris's most recognizable
+                    landmarks. Visitors can go up the tower for views
+                    across the city. The official Eiffel Tower website
+                    provides current visitor information and tickets.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- LOUVRE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=1000&q=85"
+                alt="Louvre Museum"
+            >
+
+            <div class="place-content">
+
+                <h3>Louvre Museum</h3>
+
+                <p>
+                    The Louvre is one of the world's most famous museums,
+                    home to an enormous collection of art and historical objects.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=500&q=80" alt="Louvre">
+                    <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=500&q=80" alt="Museum">
+                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=500&q=80" alt="Museum">
+                    <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=500&q=80" alt="Art">
+                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=500&q=80" alt="Artwork">
+                    <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=500&q=80" alt="Museum">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    The Louvre is a major cultural landmark in Paris.
+                    Its collections include famous paintings, sculptures,
+                    decorative arts and archaeological objects.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- VERSAILLES -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=1000&q=85"
+                alt="Palace of Versailles"
+            >
+
+            <div class="place-content">
+
+                <h3>Palace of Versailles</h3>
+
+                <p>
+                    The Palace of Versailles is a famous royal palace
+                    known for its grand architecture and gardens.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=500&q=80" alt="Versailles">
+                    <img src="https://images.unsplash.com/photo-1582610116397-edb318620f90?auto=format&fit=crop&w=500&q=80" alt="Versailles">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=500&q=80" alt="Palace">
+                    <img src="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=500&q=80" alt="Garden">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="France">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Paris">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Versailles is famous for its palace, Hall of Mirrors
+                    and extensive formal gardens. It represents an important
+                    part of French royal history.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESTAURANTS -->
+
+<section class="section hotel-section">
+
+    <h2>Famous Restaurants in France</h2>
+
+    <p class="section-description">
+        Experience French culture through its famous dining traditions.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- PARISIAN BISTRO -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=85"
+                alt="French Bistro"
+            >
+
+            <div class="place-content">
+
+                <h3>Parisian Bistro</h3>
+
+                <p>
+                    Traditional Parisian bistros offer classic French
+                    dishes in a relaxed and welcoming atmosphere.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="French restaurant">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="French food">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Food">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Meal">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    French bistros are known for classic dishes,
+                    fresh bread, desserts and a relaxed dining style.
+                    Paris has a huge variety of restaurants and cafés.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FRENCH FINE DINING -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                alt="French Fine Dining"
+            >
+
+            <div class="place-content">
+
+                <h3>French Fine Dining Restaurant</h3>
+
+                <p>
+                    France is famous for elegant restaurants that
+                    combine traditional cooking with modern techniques.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" alt="Fine dining">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="French food">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Food">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" alt="Dining">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    French fine dining emphasizes presentation,
+                    high-quality ingredients and carefully prepared dishes.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FRENCH CAFE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85"
+                alt="French Cafe"
+            >
+
+            <div class="place-content">
+
+                <h3>French Café</h3>
+
+                <p>
+                    French cafés are popular places to enjoy coffee,
+                    pastries, sandwiches and desserts.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=500&q=80" alt="French cafe">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" alt="Coffee">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Croissant">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="Bread">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="Food">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    French cafés are an important part of everyday
+                    life and are popular for breakfast, coffee,
+                    conversation and light meals.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAMOUS FOOD -->
+
+<section class="section">
+
+    <h2>Famous Food of France</h2>
+
+    <p class="section-description">
+        Discover some of the most popular foods and desserts of France.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- CROISSANT -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=85"
+                alt="Croissant"
+            >
+
+            <div class="place-content">
+
+                <h3>Croissant</h3>
+
+                <p>
+                    Croissants are famous French pastries with a
+                    buttery, flaky texture.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Croissant">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="French bread">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Pastry">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="French food">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=500&q=80" alt="Cafe">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Croissants are made from laminated dough,
+                    creating their characteristic flaky layers.
+                    They are especially popular at French bakeries.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- BAGUETTE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85"
+                alt="French Baguette"
+            >
+
+            <div class="place-content">
+
+                <h3>Baguette</h3>
+
+                <p>
+                    The baguette is a long French bread famous for
+                    its crisp crust and soft interior.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="Baguette">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Bread">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=500&q=80" alt="Bakery">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="French dessert">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="Food">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Baguettes are a traditional French bread and are
+                    commonly found in bakeries throughout France.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- RATATOUILLE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                alt="Ratatouille"
+            >
+
+            <div class="place-content">
+
+                <h3>Ratatouille</h3>
+
+                <p>
+                    Ratatouille is a vegetable dish traditionally
+                    associated with the cuisine of southern France.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Ratatouille">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="French food">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Food">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" alt="Restaurant food">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" alt="French dining">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Ratatouille is prepared with vegetables such as
+                    tomatoes, zucchini, eggplant and peppers.
+                    It is strongly associated with Provence.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- CREPE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=1000&q=85"
+                alt="French Crepe"
+            >
+
+            <div class="place-content">
+
+                <h3>Crepe</h3>
+
+                <p>
+                    Crepes are thin French pancakes that can be served
+                    with sweet or savory fillings.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=500&q=80" alt="Crepe">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" alt="Sweet">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=500&q=80" alt="Cafe">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Pastry">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Crepes can be filled with ingredients such as fruit,
+                    chocolate, sugar or cheese. They are popular throughout
+                    France.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Explore the World</h3>
+
+    <p>
+        Discover beautiful countries, destinations,
+        food, history and culture.
+    </p>
+
+    <p>
+        © 2026 Explore the World. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    const detailButtons =
+        document.querySelectorAll(".detail-button");
+
+    detailButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const details =
+                button.nextElementSibling;
+
+            details.classList.toggle("show");
+
+            if (details.classList.contains("show")) {
+                button.textContent = "Hide Details";
+            } else {
+                button.textContent = "View Details";
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

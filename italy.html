@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Italy - Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .country-hero {
+            min-height: 65vh;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .country-hero h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .country-hero p {
+            font-size: 21px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 25px 60px 0;
+            color: #159895;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .country-info {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            color: #666;
+            font-size: 17px;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+            text-align: left;
+        }
+
+        .place-card > img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .place-content {
+            padding: 25px;
+        }
+
+        .place-content h3 {
+            font-size: 27px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+
+        .place-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 18px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .details-box {
+            display: none;
+            background: #eef7f7;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .details-box.show {
+            display: block;
+        }
+
+        .detail-button {
+            border: none;
+            padding: 11px 22px;
+            border-radius: 25px;
+            background: #159895;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .detail-button:hover {
+            background: #0d7775;
+        }
+
+        @media (max-width: 800px) {
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .country-hero h1 {
+                font-size: 45px;
+            }
+
+            .back-link {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .country-hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Explore the World</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#countries">Countries</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#hotels">Hotels</a>
+        <a href="index.html#food">Food</a>
+        <a href="index.html#activities">Activities</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<a class="back-link" href="index.html#countries">
+    ← Back to Countries
+</a>
+
+
+<!-- HERO -->
+
+<section class="country-hero">
+    <div>
+        <h1>Italy</h1>
+        <p>Discover the beauty, history, food and culture of Italy</p>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+    <h2>About Italy</h2>
+
+    <p class="country-info">
+        Italy is a beautiful country in Southern Europe famous for its
+        ancient history, art, architecture, fashion, beautiful cities
+        and delicious cuisine. Italy is home to famous destinations
+        such as Rome, Venice, Florence and Milan. The country is also
+        known for landmarks such as the Colosseum, the Leaning Tower
+        of Pisa and the canals of Venice.
+    </p>
+
+</section>
+
+
+<!-- FAMOUS PLACES -->
+
+<section class="section hotel-section">
+
+    <h2>Famous Places in Italy</h2>
+
+    <p class="section-description">
+        Explore some of the most beautiful and famous destinations in Italy.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- ROME -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1000&q=85"
+                alt="Rome Italy"
+            >
+
+            <div class="place-content">
+
+                <h3>Rome</h3>
+
+                <p>
+                    Rome is the capital city of Italy and one of the
+                    world's most famous historical cities. It is known
+                    for ancient buildings, beautiful fountains and museums.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Rome is often called the Eternal City.
+                    Visitors can explore ancient monuments, museums,
+                    churches, beautiful squares and traditional Italian
+                    streets.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- VENICE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1000&q=85"
+                alt="Venice Italy"
+            >
+
+            <div class="place-content">
+
+                <h3>Venice</h3>
+
+                <p>
+                    Venice is famous for its canals, bridges, historic
+                    buildings and romantic gondola rides.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=500&q=80" alt="Venice">
+                    <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=500&q=80" alt="Venice">
+                    <img src="https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?auto=format&fit=crop&w=500&q=80" alt="Venice">
+                    <img src="https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?auto=format&fit=crop&w=500&q=80" alt="Venice">
+                    <img src="https://images.unsplash.com/photo-1472173148041-00294f0814a2?auto=format&fit=crop&w=500&q=80" alt="Venice">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Venice is built around a network of canals.
+                    It is famous for gondolas, St. Mark's Square,
+                    historic bridges and beautiful architecture.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FLORENCE -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1543429258-6f0d4f7a3f2d?auto=format&fit=crop&w=1000&q=85"
+                alt="Florence Italy"
+            >
+
+            <div class="place-content">
+
+                <h3>Florence</h3>
+
+                <p>
+                    Florence is famous for Renaissance art, museums,
+                    beautiful architecture and historic streets.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1543429258-6f0d4f7a3f2d?auto=format&fit=crop&w=500&q=80" alt="Florence">
+                    <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=500&q=80" alt="Florence">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Florence played an important role in the Renaissance.
+                    It is home to famous museums, galleries, churches
+                    and historic buildings.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- MILAN -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1520440229-6469a149ac59?auto=format&fit=crop&w=1000&q=85"
+                alt="Milan Italy"
+            >
+
+            <div class="place-content">
+
+                <h3>Milan</h3>
+
+                <p>
+                    Milan is a major Italian city famous for fashion,
+                    shopping, art, architecture and business.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1520440229-6469a149ac59?auto=format&fit=crop&w=500&q=80" alt="Milan">
+                    <img src="https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Milan is one of Italy's most important cities.
+                    It is particularly famous for fashion, the Duomo,
+                    shopping districts and cultural attractions.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORICAL PLACES -->
+
+<section class="section">
+
+    <h2>Historical Places in Italy</h2>
+
+    <p class="section-description">
+        Discover Italy's incredible historical landmarks.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- COLOSSEUM -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1000&q=85"
+                alt="Colosseum"
+            >
+
+            <div class="place-content">
+
+                <h3>Colosseum</h3>
+
+                <p>
+                    The Colosseum is one of the world's most famous
+                    ancient Roman landmarks.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Colosseum">
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    The Colosseum was a large amphitheater built in
+                    ancient Rome. It remains one of the most recognizable
+                    symbols of Roman history.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- POMPEII -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85"
+                alt="Pompeii"
+            >
+
+            <div class="place-content">
+
+                <h3>Pompeii</h3>
+
+                <p>
+                    Pompeii is an ancient Roman city preserved by the
+                    eruption of Mount Vesuvius.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=500&q=80" alt="Pompeii">
+                    <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=500&q=80" alt="Ancient ruins">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Rome">
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Pompeii provides an important look into everyday
+                    Roman life. Archaeological remains include homes,
+                    streets, public buildings and artwork.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- LEANING TOWER -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1000&q=85"
+                alt="Leaning Tower of Pisa"
+            >
+
+            <div class="place-content">
+
+                <h3>Leaning Tower of Pisa</h3>
+
+                <p>
+                    The Leaning Tower of Pisa is famous around the world
+                    because of its distinctive tilt.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=500&q=80" alt="Pisa">
+                    <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500&q=80" alt="Italy">
+                    <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=500&q=80" alt="Italy">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    The Leaning Tower is the freestanding bell tower
+                    of Pisa's cathedral complex. Its famous tilt developed
+                    because of unstable foundation conditions.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESTAURANTS -->
+
+<section class="section hotel-section">
+
+    <h2>Famous Restaurants in Italy</h2>
+
+    <p class="section-description">
+        Experience Italy through its famous dining traditions.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- ROMAN RESTAURANT -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=85"
+                alt="Italian Restaurant"
+            >
+
+            <div class="place-content">
+
+                <h3>Roman Restaurant</h3>
+
+                <p>
+                    Traditional Roman restaurants are famous for pasta,
+                    pizza, local meat dishes and classic desserts.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="Italian restaurant">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                    <img src="https://images.unsplash.com/photo-1579684947550-22e945225d9a?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Roman dining focuses on simple ingredients,
+                    traditional recipes and hearty pasta dishes.
+                    Visitors can enjoy food in both modern and
+                    traditional restaurants.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PIZZERIA -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1000&q=85"
+                alt="Italian Pizzeria"
+            >
+
+            <div class="place-content">
+
+                <h3>Traditional Pizzeria</h3>
+
+                <p>
+                    Italian pizzerias are famous for freshly baked
+                    pizza prepared with traditional ingredients.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=80" alt="Italian pizza">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Traditional Italian pizzerias often focus on
+                    fresh dough, tomato, cheese and carefully selected
+                    toppings.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PASTA RESTAURANT -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=85"
+                alt="Italian Pasta Restaurant"
+            >
+
+            <div class="place-content">
+
+                <h3>Italian Pasta Restaurant</h3>
+
+                <p>
+                    Pasta restaurants offer many traditional Italian
+                    pasta dishes prepared with different sauces and ingredients.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=500&q=80" alt="Italian food">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Italy has many regional pasta traditions.
+                    Different regions use different pasta shapes,
+                    sauces, cheeses and ingredients.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOD -->
+
+<section class="section">
+
+    <h2>Famous Food of Italy</h2>
+
+    <p class="section-description">
+        Taste some of the world's most popular Italian foods.
+    </p>
+
+    <div class="country-grid">
+
+
+        <!-- PIZZA -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85"
+                alt="Pizza"
+            >
+
+            <div class="place-content">
+
+                <h3>Pizza</h3>
+
+                <p>
+                    Pizza is one of Italy's most famous foods and is
+                    enjoyed around the world.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=80" alt="Italian pizza">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Italian pizza is traditionally made with dough,
+                    tomato, cheese and other fresh ingredients.
+                    Neapolitan pizza is particularly famous.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PASTA -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85"
+                alt="Pasta"
+            >
+
+            <div class="place-content">
+
+                <h3>Pasta</h3>
+
+                <p>
+                    Pasta is an essential part of Italian cuisine and
+                    comes in many shapes and varieties.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Popular Italian pasta dishes include spaghetti,
+                    lasagna, ravioli, carbonara and many regional varieties.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- GELATO -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1000&q=85"
+                alt="Gelato"
+            >
+
+            <div class="place-content">
+
+                <h3>Gelato</h3>
+
+                <p>
+                    Gelato is a popular Italian frozen dessert available
+                    in many delicious flavors.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80" alt="Gelato">
+                    <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=500&q=80" alt="Ice cream">
+                    <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=500&q=80" alt="Gelato">
+                    <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?auto=format&fit=crop&w=500&q=80" alt="Ice cream">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Italian gelato is known for its dense, smooth texture
+                    and wide range of flavors. Gelaterias can be found
+                    throughout Italy.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- TIRAMISU -->
+
+        <div class="place-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1000&q=85"
+                alt="Tiramisu"
+            >
+
+            <div class="place-content">
+
+                <h3>Tiramisu</h3>
+
+                <p>
+                    Tiramisu is a famous Italian dessert made with
+                    coffee, mascarpone and layers of soft biscuits.
+                </p>
+
+                <div class="gallery">
+
+                    <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&q=80" alt="Tiramisu">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=500&q=80" alt="Sweet">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" alt="Dessert">
+
+                </div>
+
+                <button class="detail-button">
+                    View Details
+                </button>
+
+                <div class="details-box">
+                    Tiramisu is a popular Italian dessert featuring
+                    coffee-soaked ladyfingers, mascarpone cream
+                    and cocoa.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Explore the World</h3>
+
+    <p>
+        Discover beautiful countries, destinations,
+        food, history and culture.
+    </p>
+
+    <p>
+        © 2026 Explore the World. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    const detailButtons =
+        document.querySelectorAll(".detail-button");
+
+    detailButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const details =
+                button.nextElementSibling;
+
+            details.classList.toggle("show");
+
+            if (details.classList.contains("show")) {
+                button.textContent = "Hide Details";
+            } else {
+                button.textContent = "View Details";
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
